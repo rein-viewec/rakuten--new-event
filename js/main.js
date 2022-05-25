@@ -7,6 +7,15 @@ $(window).scroll(() => {
   $('#Navbar').removeClass('nav--fixed')
 })
 
+const addMoreExpension = () => {
+  const mores = document.querySelectorAll('.more')
+  mores.forEach((m) => {
+    m.addEventListener('click', (e) => {
+      $(e.target).addClass('more--active').prev().slideToggle()
+    })
+  })
+}
+addMoreExpension()
 
 const time = (endTime) => {
   const deadline = moment(endTime).unix()

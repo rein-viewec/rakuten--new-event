@@ -1,9 +1,9 @@
-@mixin flex()
+@mixin flex($w: 100%)
   display: flex
   justify-content: center
-  align-items: start
+  align-items: center
   flex-wrap: wrap
-  width: 100%
+  width: $w
 
 @mixin trs($s:100ms)
   transition: $s all ease-in-out
@@ -15,10 +15,15 @@
   height: 100%
   display: block
 
-@mixin hov($opacity: .85)
-  +trs
+@mixin hov($opacity: .85, $s:100ms)
+  +trs($s)
   &:hover
     opacity: $opacity
+
+@mixin press($deep: 2px,$s:100ms)
+  +trs($s)
+  &:hover
+    transform: translate($deep, $deep)
 
 @mixin b()
   display: block
@@ -39,4 +44,3 @@
   display: -webkit-box
   -webkit-line-clamp: $line
   -webkit-box-orient: vertical
-

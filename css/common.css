@@ -1209,6 +1209,9 @@ html::-webkit-scrollbar-thumb {
 
 a {
   width: 100%;
+  color: unset;
+  cursor: pointer;
+  text-decoration: unset;
 }
 
 a img {
