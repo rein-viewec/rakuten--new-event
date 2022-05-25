@@ -1,0 +1,214 @@
+@import '_mixins/_mixins'
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap')
+@font-face
+    font-family: 'bahnschrift'
+    src: url('../font/bahnschrift.ttf')
+
+$primary: #ee504d
+$secondary: #fff4dc
+
+@mixin zenKakuGothicNew($weight: 400)
+    font-family: 'Noto+Sans+JP', 'Zen Kaku Gothic New'
+    font-weight: $weight
+
+@mixin bahnschrift($weight: 400)
+    font-family: 'bahnschrift'
+    font-weight: $weight
+
+.area
+    +flex
+    &.gray
+        background-color: #f8fbf8
+    &.timer
+        background-color: $primary
+
+.container
+    +flex
+    max-width: 1280px
+    &.full
+        max-width: 100%
+        width: 100%
+        padding: 0
+    &.nav
+        max-width: 100%
+        min-height: 116px
+
+.timer
+    &__block
+        color: $secondary
+        padding: 32px
+    &__title
+        +flex
+        align-items: center
+        font-size: 2rem
+        &__text
+            +zenKakuGothicNew
+    &__icon
+        width: 40px
+        height: 40px
+    &__content
+        +flex
+        padding: 12px 0 0 14px
+    &__box
+        +flex
+        width: auto
+        align-items: end
+    &__time
+        > span
+            color: $primary
+            font-size: 4.25rem
+            +bahnschrift(400)
+            position: relative
+            z-index: 5
+            &:before
+                content: ''
+                position: absolute
+                border-radius: 2.5px
+                top: 0px
+                margin: auto
+                width: 100%
+                height: 90%
+                background-color: $secondary
+                z-index: -1
+    &__text
+        font-size: 2em
+        padding: 0 12px 8px 5px
+        font-weight: 400
+    &--hide
+        display: none
+
+.nav
+    &__block
+        +flex
+        +a
+        padding: 20px 0
+        background-color: $secondary
+        &.nav--fixed
+            position: fixed
+            z-index: 100
+            top: 0px
+    &__box
+        +flex
+        +hov
+        max-width: calc(80% / 5)
+        position: relative
+        &:not(:last-child)::after
+            content: ''
+            display: inline-block
+            width: 1.5px
+            height: 90%
+            top: 0
+            bottom: 0
+            position: absolute
+            margin: auto auto
+            z-index: 1
+            background-color: $primary
+            right: -1px
+    &__text
+        +flex
+        align-items: center
+        padding: 0 28px 0
+        overflow: hidden
+        text-align: center
+        vertical-align: middle
+        display: table-ceil
+        min-height: 60px
+        color: $primary
+        font-weight: bold
+        font-size: 2rem
+        h5
+            +break
+    &__icon
+        color: $primary
+
+.content
+    &__block
+        margin: 50px 0
+        +flex
+        max-width: 1280px
+    &__box
+        margin: 48px 0
+        max-width: 1280px
+    &__ele
+        width: 100%
+        max-width: 240px
+        margin: 10px
+    // Automatic generator items
+    &__item
+        +flex
+        justify-content: space-around
+        +a
+        li
+            border-radius: 8px
+            padding: 20px
+            border: 1px solid #aaaaaa
+        &.top
+            justify-content: space-between
+            .img__box
+                width: 530px
+                height: 530px
+            li
+                +flex
+                margin: 20px
+                max-width: 45%
+        &.sub
+            justify-content: space-between
+            .img__box
+                width: 340px
+                height: 340px
+            li
+                +flex
+                margin: 18px
+                max-width: 30%
+    &__button
+        +flex
+        +b
+        background-color: $primary
+        padding: 20px
+        font-size: 2rem
+        text-align: center
+        border-radius: 4px
+        color: $secondary
+        box-shadow: 8px 8px 0 #db3f40
+        cursor: pointer
+        transition: 100ms all ease-in-out
+        &:hover
+            transform: translate(3px, 3px)
+        i
+            margin: 0 0 0 10px
+
+.item
+    &__image
+
+    &__name
+        font-size: 2rem
+        font-weight: bold
+        +break(2)
+    &__button
+    &__price
+
+.coupon
+    +flex
+    .image
+        max-width: 240px
+        max-height: 240px
+
+@media all and (max-width: 1280px)
+    .container
+        // padding-right: 10px
+        // padding-left: 10px
+        // max-width: 100%
+        &.nav
+            max-width: 100%
+            min-height: 100px
+    .nav
+        &__box
+            max-width: calc(100% / 5)
+            // &:not(:last-child)::after
+        &__text
+            padding: 18px 0
+            font-size: 1.25rem
+        &__icon
+            color: $primary
+
+// @media all and (max-width: 720px)
