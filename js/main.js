@@ -11,7 +11,7 @@ const addMoreExpension = () => {
   const mores = document.querySelectorAll('.more')
   mores.forEach((m) => {
     m.addEventListener('click', (e) => {
-      $(e.target).addClass('more--active').prev().slideToggle()
+      $(e.target).addClass('more--active').prev().slideDown()
     })
   })
 }

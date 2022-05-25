@@ -128,6 +128,8 @@ $thirdly: #d1322f
         max-width: 1280px
     &__title
         +flex
+    &__item
+        +flex
     &__box
         +flex
         margin: 48px 0
@@ -172,12 +174,12 @@ $thirdly: #d1322f
         object-fit: cover
     &__name
         +break(2)
+        +hov(0.7)
         font-size: 1.2rem
         font-weight: bold
         overflow: hidden
         cursor: pointer
         margin: 8px 0
-        +hov(0.7)
     &__button
         +flex
         +press
@@ -232,7 +234,6 @@ $thirdly: #d1322f
             font-size: 1.5rem
             font-weight: bold
 
-
 .obvious
     .top
         justify-content: space-between
@@ -258,17 +259,39 @@ $thirdly: #d1322f
                 margin: 18px
                 max-width: 30%
 
+.swiper
+    &__block
+        overflow: hidden
+        width: 100%
+        height: 850px
+        position: relative
+        padding: 10px 0
+    &-wrapper
+        justify-content: unset
+        flex-wrap: nowrap
+        width: 100%
+        height: 100%
+        z-index: 1
+        display: flex
+        transition-property: transform
+        box-sizing: content-box
+    &-slide
+        width: 340px
+        height: auto
+    &-button-prev,
+    &-button-next
+        font-size: 0.5rem
+
 .more
     opacity: 1
     +trs
     &--active
         pointer-events: none
         opacity: 0
+
 .expension
     overflow: hidden
     display: none
-    &--active
-
 
 .coupon
     +flex

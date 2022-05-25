@@ -43,6 +43,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -168,9 +172,10 @@
             />
           </div>
           <div class="content__item">
-            <a href="#">
+            <a href="#" target="_blank">
               <img
                 class="image"
+                loading="lazy"
                 src="images/banner2.jpg"
                 alt="main shop item image"
               />
@@ -271,8 +276,11 @@
                     loading="lazy"
                     alt="喜之坊パイナップルケーキ（320g/8個入）お菓子 アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
                   />
-                  <div class="item__name" title="喜之坊パイナップルケーキ（320g/8個入）お菓子
-                  アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】">
+                  <div
+                    class="item__name"
+                    title="喜之坊パイナップルケーキ（320g/8個入）お菓子
+                  アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
+                  >
                     喜之坊パイナップルケーキ（320g/8個入）お菓子
                     アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】
                   </div>
@@ -304,8 +312,11 @@
                     alt="喜之坊パイナップルケーキ（320g/8個入）お菓子 アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
                   />
                 </a>
-                <div class="item__name" title="喜之坊パイナップルケーキ（320g/8個入）お菓子
-                アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】">
+                <div
+                  class="item__name"
+                  title="喜之坊パイナップルケーキ（320g/8個入）お菓子
+                アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
+                >
                   喜之坊パイナップルケーキ（320g/8個入）お菓子
                   アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】
                 </div>
@@ -337,8 +348,11 @@
                     alt="喜之坊パイナップルケーキ（320g/8個入）お菓子 アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
                   />
                 </a>
-                <div class="item__name" title="喜之坊パイナップルケーキ（320g/8個入）お菓子
-                アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】">
+                <div
+                  class="item__name"
+                  title="喜之坊パイナップルケーキ（320g/8個入）お菓子
+                アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
+                >
                   喜之坊パイナップルケーキ（320g/8個入）お菓子
                   アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】
                 </div>
@@ -368,8 +382,11 @@
                     alt="喜之坊パイナップルケーキ（320g/8個入）お菓子 アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
                   />
                 </a>
-                <div class="item__name" title="喜之坊パイナップルケーキ（320g/8個入）お菓子
-                アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】">
+                <div
+                  class="item__name"
+                  title="喜之坊パイナップルケーキ（320g/8個入）お菓子
+                アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
+                >
                   喜之坊パイナップルケーキ（320g/8個入）お菓子
                   アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】
                 </div>
@@ -399,8 +416,11 @@
                     alt="喜之坊パイナップルケーキ（320g/8個入）お菓子 アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
                   />
                 </a>
-                <div class="item__name" title="喜之坊パイナップルケーキ（320g/8個入）お菓子
-                アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】">
+                <div
+                  class="item__name"
+                  title="喜之坊パイナップルケーキ（320g/8個入）お菓子
+                アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
+                >
                   喜之坊パイナップルケーキ（320g/8個入）お菓子
                   アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】
                 </div>
@@ -514,7 +534,7 @@
               </ul>
             </div>
             <div class="content__button more">
-              <span>もっと見る</span> 
+              <span>もっと見る</span>
               <i class="fas fa-chevron-circle-right"></i>
             </div>
           </div>
@@ -534,9 +554,9 @@
             />
           </div>
 
-          <div class="content__box slide">
-            <ul class="item__block sub">
-              <li class="item__box">
+          <div class="content__box swiper__block swiper__1">
+            <ul class="item__block sub swiper-wrapper">
+              <li class="item__box swiper-slide">
                 <a
                   target="_blank"
                   href="https://item.rakuten.co.jp/twdirect/luckygift-009/"
@@ -548,8 +568,11 @@
                     alt="喜之坊パイナップルケーキ（320g/8個入）お菓子 アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
                   />
                 </a>
-                <div class="item__name" title="喜之坊パイナップルケーキ（320g/8個入）お菓子
-                アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】">
+                <div
+                  class="item__name"
+                  title="喜之坊パイナップルケーキ（320g/8個入）お菓子
+                アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
+                >
                   喜之坊パイナップルケーキ（320g/8個入）お菓子
                   アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】
                 </div>
@@ -567,7 +590,7 @@
                   商品はかごに追加
                 </a>
               </li>
-              <li class="item__box">
+              <li class="item__box swiper-slide">
                 <a
                   target="_blank"
                   href="https://item.rakuten.co.jp/twdirect/luckygift-009/"
@@ -579,8 +602,11 @@
                     alt="喜之坊パイナップルケーキ（320g/8個入）お菓子 アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
                   />
                 </a>
-                <div class="item__name" title="喜之坊パイナップルケーキ（320g/8個入）お菓子
-                アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】">
+                <div
+                  class="item__name"
+                  title="喜之坊パイナップルケーキ（320g/8個入）お菓子
+                アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
+                >
                   喜之坊パイナップルケーキ（320g/8個入）お菓子
                   アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】
                 </div>
@@ -598,7 +624,7 @@
                   商品はかごに追加
                 </a>
               </li>
-              <li class="item__box">
+              <li class="item__box swiper-slide">
                 <a
                   target="_blank"
                   href="https://item.rakuten.co.jp/twdirect/luckygift-009/"
@@ -610,8 +636,79 @@
                     alt="喜之坊パイナップルケーキ（320g/8個入）お菓子 アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
                   />
                 </a>
-                <div class="item__name" title="喜之坊パイナップルケーキ（320g/8個入）お菓子
-                アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】">
+                <div
+                  class="item__name"
+                  title="喜之坊パイナップルケーキ（320g/8個入）お菓子
+                アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
+                >
+                  喜之坊パイナップルケーキ（320g/8個入）お菓子
+                  アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】
+                </div>
+                <div class="item__price">
+                  <img src="images/item-tag.svg" alt="shop item tag" />
+                  <div>
+                    25,700
+                    <span>円</span>
+                  </div>
+                </div>
+                <a href="#" target="_blank" class="item__button primary">
+                  ご購入はコチラから
+                </a>
+                <a href="#" target="_blank" class="item__button gray">
+                  商品はかごに追加
+                </a>
+              </li>
+              <li class="item__box swiper-slide">
+                <a
+                  target="_blank"
+                  href="https://item.rakuten.co.jp/twdirect/luckygift-009/"
+                >
+                  <img
+                    src="https://image.rakuten.co.jp/twdirect/cabinet/07287065/compass1576649864.jpg"
+                    class="item__image"
+                    loading="lazy"
+                    alt="喜之坊パイナップルケーキ（320g/8個入）お菓子 アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
+                  />
+                </a>
+                <div
+                  class="item__name"
+                  title="喜之坊パイナップルケーキ（320g/8個入）お菓子
+                アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
+                >
+                  喜之坊パイナップルケーキ（320g/8個入）お菓子
+                  アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】
+                </div>
+                <div class="item__price">
+                  <img src="images/item-tag.svg" alt="shop item tag" />
+                  <div>
+                    25,700
+                    <span>円</span>
+                  </div>
+                </div>
+                <a href="#" target="_blank" class="item__button primary">
+                  ご購入はコチラから
+                </a>
+                <a href="#" target="_blank" class="item__button gray">
+                  商品はかごに追加
+                </a>
+              </li>
+              <li class="item__box swiper-slide">
+                <a
+                  target="_blank"
+                  href="https://item.rakuten.co.jp/twdirect/luckygift-009/"
+                >
+                  <img
+                    src="https://image.rakuten.co.jp/twdirect/cabinet/07287065/compass1576649864.jpg"
+                    class="item__image"
+                    loading="lazy"
+                    alt="喜之坊パイナップルケーキ（320g/8個入）お菓子 アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
+                  />
+                </a>
+                <div
+                  class="item__name"
+                  title="喜之坊パイナップルケーキ（320g/8個入）お菓子
+                アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】"
+                >
                   喜之坊パイナップルケーキ（320g/8個入）お菓子
                   アフタヌーンティー 台湾お菓子 【喜之坊】【台湾直送】
                 </div>
@@ -630,13 +727,20 @@
                 </a>
               </li>
             </ul>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
           </div>
+          
+          <a href="#" targt="_blank" class="content__button">
+            <span>もっと見る</span>
+            <i class="fas fa-chevron-circle-right"></i>
+          </a>
         </div>
       </div>
     </div>
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
-
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script
       src="https://kit.fontawesome.com/9188edaa95.js"
       crossorigin="anonymous"
@@ -646,6 +750,26 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.js"></script>
     <script src="js/main.js"></script>
     <script>
+      const swiperParams = {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        grabCursor: true,
+        autoplay: {
+          delay: 0,
+        },
+        speed: 10000,
+        loop: true,
+        freeMode: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      }
+      const swiper1 = new Swiper('.swiper__1', swiperParams)
       const countloop = () => {
         // Set time format YYYY-MM-DD hh:mm
         // ex 2022-12-21 11:49

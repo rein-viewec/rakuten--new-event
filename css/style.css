@@ -325,6 +325,25 @@
   width: 100%;
 }
 
+.content__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 100%;
+}
+
 .content__box {
   display: -webkit-box;
   display: -webkit-flex;
@@ -458,14 +477,14 @@
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  -webkit-transition: 100ms all ease-in-out;
+  -o-transition: 100ms all ease-in-out;
+  transition: 100ms all ease-in-out;
   font-size: 1.2rem;
   font-weight: bold;
   overflow: hidden;
   cursor: pointer;
   margin: 8px 0;
-  -webkit-transition: 100ms all ease-in-out;
-  -o-transition: 100ms all ease-in-out;
-  transition: 100ms all ease-in-out;
 }
 
 .item__name:hover {
@@ -653,6 +672,47 @@
 .obvious .sub .item__box {
   margin: 18px;
   max-width: 30%;
+}
+
+.swiper__block {
+  overflow: hidden;
+  width: 100%;
+  height: 850px;
+  position: relative;
+  padding: 10px 0;
+}
+
+.swiper-wrapper {
+  -webkit-box-pack: unset;
+  -webkit-justify-content: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.swiper-slide {
+  width: 340px;
+  height: auto;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  font-size: 0.5rem;
 }
 
 .more {
