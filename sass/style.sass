@@ -7,6 +7,7 @@
 $primary: #ee504d
 $secondary: #fff4dc
 $thirdly: #d1322f
+$fourth: #f9dc5c
 
 @mixin zenKakuGothicNew($weight: 400)
     font-family: 'Noto+Sans+JP', 'Zen Kaku Gothic New'
@@ -26,6 +27,10 @@ $thirdly: #d1322f
 .container
     +flex
     max-width: 1280px
+    &.top
+        max-width: 100%
+        width: 100%
+        padding: 0
     &.full
         max-width: 100%
         width: 100%
@@ -34,6 +39,11 @@ $thirdly: #d1322f
         max-width: 100%
         min-height: 116px
 
+.top
+    &__banner
+        &.sp
+            display: none
+            
 .timer
     &__block
         color: $secondary
@@ -81,7 +91,7 @@ $thirdly: #d1322f
     &__block
         +flex
         +a
-        padding: 20px 0
+        padding: 28px 0
         background-color: $secondary
         &.nav--fixed
             position: fixed
@@ -106,19 +116,19 @@ $thirdly: #d1322f
             right: -1px
     &__text
         +flex
-
         padding: 0 28px 0
         overflow: hidden
         text-align: center
         vertical-align: middle
         display: table-ceil
-        min-height: 60px
+        min-height: 36px
         color: $primary
         font-weight: bold
         font-size: 2rem
         h5
             +break
     &__icon
+        font-size: 1.25rem
         color: $primary
 
 .content
@@ -134,6 +144,8 @@ $thirdly: #d1322f
         +flex
         margin: 48px 0
         max-width: 1280px
+        a
+            +flex
     // Automatic generator items
     &__button
         +flex
@@ -141,18 +153,22 @@ $thirdly: #d1322f
         +bahnschrift(600)
         background-color: $primary
         padding: 26px 20px
-        margin: 24px
+        margin: 20px
         font-size: 2rem
         text-align: center
         border-radius: 10px
         color: $secondary
-        box-shadow: 6px 6px 0 #db3f40
         cursor: pointer
         transition: 100ms all ease-in-out
-        &:hover
-            transform: translate(3px, 3px)
+        user-select: none
+        +pressY
+        box-shadow: 0px 8px 0 #db3f40
+        &:active
+            box-shadow: 0px 6px 0 #db3f40
         i
             margin: 0 0 0 10px
+    &__tags
+        max-width: 1200px
 
 .item
     &__block
@@ -162,11 +178,13 @@ $thirdly: #d1322f
         +flex
         +zenKakuGothicNew
         border-radius: 15px
-        padding: 20px
+        padding: 2%
         border: 3px solid #dbdbdb
         color: #464646
         margin: 18px
         max-width: 30%
+    &__body
+        +flex
     &__image
         +img
         width: 340px
@@ -180,9 +198,18 @@ $thirdly: #d1322f
         overflow: hidden
         cursor: pointer
         margin: 8px 0
+    &__description
+        +break(4)
+        +hov(0.7)
+        font-size: 1rem
+        overflow: hidden
+        cursor: pointer
+        margin: 8px 0
+        font-weight: bold
+        color: #464646
     &__button
         +flex
-        +press
+        +pressY
         color: #ffffff
         padding: 16px 0
         margin: 14px 0
@@ -190,15 +217,22 @@ $thirdly: #d1322f
         background-color: $primary
         position: relative
         border-radius: 8px
+        user-select: none
+        &:active
+            &::before
+                transform: scaleY(0.9)
         &::before
             content: ''
             +flex
             min-height: 110%
             position: absolute
-            border: 2px solid
+            outline: 2px solid
             border-radius: 8px
             top: 2px
+            right: 0
+            left: 0
             z-index: -1
+            +trs
         &:after
             position: absolute
             right: 15px
@@ -209,7 +243,7 @@ $thirdly: #d1322f
         &.primary
             background-color: $primary
             &::before
-                border-color: $primary
+                outline-color: $primary
             &::after
                 content: '›'
                 padding: 0 5px 0px 0
@@ -217,7 +251,7 @@ $thirdly: #d1322f
         &.gray
             background-color: #313131
             &::before
-                border-color: #313131
+                outline-color: #313131
             &::after
                 content: '+'
     &__price
@@ -233,6 +267,7 @@ $thirdly: #d1322f
         span
             font-size: 1.5rem
             font-weight: bold
+            margin: 0 0 0 -5%
 
 .obvious
     .top
@@ -252,42 +287,127 @@ $thirdly: #d1322f
                 font-size: 5.5rem
                 span
                     font-size: 2rem
-    .sub
-        justify-content: space-between
-        .item
-            &__box
-                margin: 18px
-                max-width: 30%
+
+.full-width
+    a
+        width: unset
+    .item
+        &__block
+            +flex
+            justify-content: space-around
+        &__box
+            justify-content: space-between
+            max-width: 100%
+        &__body
+            max-width: calc(100% - 515px)
+            padding: 0 0 0 15px
+        &__image
+            +img
+            width: 500px
+            height: 500px
+            object-fit: cover
+        &__name
+            font-size: 2rem
+        &__price
+            font-size: 5rem
+            justify-content: start
+            img
+                width: 20%
+                height: 20%
+        &__button
+            width: 100%
 
 .swiper
     &__block
         overflow: hidden
         width: 100%
-        height: 850px
+        // height: 850px
         position: relative
         padding: 10px 0
+        user-select: none
     &-wrapper
         justify-content: unset
         flex-wrap: nowrap
-        width: 100%
-        height: 100%
+        // width: 100%
+        // height: 100%
         z-index: 1
         display: flex
         transition-property: transform
         box-sizing: content-box
     &-slide
-        width: 340px
+        max-width: 320px
         height: auto
     &-button-prev,
     &-button-next
+        display: none
+        padding: 30px
+        border-radius: 100px
+        background-color: #ffffff
+        drop-shadow: 2px 2px 5px #000000ee
+        width: 40px
+        height: 40px
         font-size: 0.5rem
 
 .more
     opacity: 1
     +trs
+    &__yellow
+        background-color: $fourth
+        color: #272727
+        box-shadow: 0px 8px 0 #d8bd46
+        &:active
+            box-shadow: 0px 6px 0 #d8bd46
     &--active
         pointer-events: none
         opacity: 0
+        padding: 0
+        margin: 0
+
+.search
+    &__block
+        +flex
+        padding: 20px
+    &__box
+        +flex
+    &__input
+        +zenKakuGothicNew
+        text-align: center
+        flex: 1 0
+        background-color: #facac8
+        min-height: 56px
+        grid-area: field
+        padding-bottom: 6px
+        position: relative
+        font-size: 1.5rem
+        color: $primary
+        font-weight: bold
+        &::placeholder
+            color: $primary
+            font-weight: normal
+
+.tag
+    &__block
+        +flex
+        width: 900px
+        flex-wrap: wrap
+        a
+            +flex
+            +bahnschrift
+            width: auto
+            padding: 10px 30px
+            font-size: 1rem
+            border: 1px solid $primary
+            border-radius: 100px
+            margin: 5px
+            color: $primary
+            transition: unset
+            position: relative
+            &:hover
+                opacity: 0.7
+            &:active
+                top: 3px
+    &-move
+        transition: transform 1400ms ease-in-out !important
 
 .expension
     overflow: hidden
@@ -306,12 +426,10 @@ $thirdly: #d1322f
 
 @media all and (max-width: 1280px)
     .container
-        // padding-right: 10px
-        // padding-left: 10px
-        // max-width: 100%
         &.nav
             max-width: 100%
-            min-height: 100px
+            min-height: 138px
+
     .nav
         &__box
             max-width: calc(100% / 5)
@@ -322,4 +440,127 @@ $thirdly: #d1322f
         &__icon
             color: $primary
 
-// @media all and (max-width: 720px)
+    .content
+        &__block
+            margin: 24px 0
+
+    // $itemWidth
+    .item
+        &__box
+            $marginW: 1%
+            margin: 8px $marginW
+            max-width: 49% - $marginW
+            justify-content: center
+        &__image
+            width: 100%
+            max-width: 42vw
+            height: 42vw
+        &__price
+            font-size: 7vw
+            img
+                width: 30%
+                height: 30%
+            span
+                font-size: 1.5rem
+        &__button
+            padding: 10px 0
+            font-size: 3vw
+
+    .obvious
+        .top
+            .item
+                &__box
+                    $marginW: 1%
+                    margin: 8px $marginW
+                    max-width: 49% - $marginW
+                    justify-content: center
+                &__image
+                    width: 100%
+                    max-width: 42vw
+                    height: 42vw
+                &__name
+                    font-size: 1.2rem
+                    margin: 8px 0
+                &__price
+                    font-size: 7vw
+                    span
+                        font-size: 2rem
+
+    .coupon
+        .content
+            &__ele
+                width: 28%
+                max-width: 240px
+                margin: 4px
+
+@media all and (max-width: 980px)
+    .full-width
+        .item
+            &__body
+                max-width: 100%
+            &__image
+                width: 96vw
+                height: 96vw
+            &__price
+                justify-content: space-between
+                font-size: 12vw
+
+@media all and (max-width: 768px)
+    .container
+        &.top
+            height: 100vw
+            a
+                height: 100vw
+        &.nav
+            min-height: 96px
+    .top
+        &__banner
+            &.sp
+                display: block
+            &.pc
+                display: none
+    .content
+        &__box
+            +flex
+            margin: 16px 0
+    .swiper
+        &-button-prev,
+        &-button-next
+            // display: inline-block
+            &::after
+                font-size: 0.5rem
+                padding: 10px
+        &-button-prev
+
+        &-button-next
+
+    .nav
+        &__block
+            padding: 12px 0
+        &__box
+            &:not(:last-child)::after
+                width: 1px
+        &__icon
+            font-size: 0.75rem
+
+@media all and (max-width: 576px)
+    .timer
+        &__title
+            font-size: 1.2rem
+        &__time
+            > span
+                font-size: 2rem
+        &__text
+            padding: 0 6px 4px 3px
+            font-size: 0.75em
+
+    .item
+        &__button
+            &:after
+                display: none
+    .obvious
+        .top
+            .item
+                &__price
+                    span
+                        font-size: 1.25rem

@@ -14,16 +14,26 @@
   width: 100%
   height: 100%
   display: block
+  object-fit: cover
 
 @mixin hov($opacity: .85, $s:100ms)
   +trs($s)
   &:hover
     opacity: $opacity
 
-@mixin press($deep: 2px,$s:100ms)
+@mixin pressY($deep: 2px,$s:100ms )
+  +trs($s)
+  &:hover
+    transform: translateY($deep)
+  &:active
+    transform: translateY($deep + 5px)
+
+@mixin press($deep: 2px,$s:100ms )
   +trs($s)
   &:hover
     transform: translate($deep, $deep)
+  &:active
+    transform: translate($deep + 5px, $deep + 5px)
 
 @mixin b()
   display: block

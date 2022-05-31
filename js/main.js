@@ -1,21 +1,18 @@
 let navTop = $('#Navbar').offset().top
+let isResize = false
 $(window).resize(() => {
+  isResize = true
   navTop = $('#Navbar').offset().top
 })
+
 $(window).scroll(() => {
+  if (isResize) {
+    isResize = false
+    navTop = $('#Navbar').offset().top
+  }
   if ($(this).scrollTop() >= navTop) return $('#Navbar').addClass('nav--fixed')
   $('#Navbar').removeClass('nav--fixed')
 })
-
-const addMoreExpension = () => {
-  const mores = document.querySelectorAll('.more')
-  mores.forEach((m) => {
-    m.addEventListener('click', (e) => {
-      $(e.target).addClass('more--active').prev().slideDown()
-    })
-  })
-}
-addMoreExpension()
 
 const time = (endTime) => {
   const deadline = moment(endTime).unix()
