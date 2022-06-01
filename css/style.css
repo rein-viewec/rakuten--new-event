@@ -1541,3 +1541,12 @@
     font-size: 1.25rem;
   }
 }
+
+@media all and (max-width: 400px) {
+  .item__price {
+    font-size: 1.4rem;
+  }
+  .item__price span {
+    font-size: 1rem;
+  }
+}
