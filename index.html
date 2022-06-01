@@ -17,10 +17,7 @@
       content="台湾,お土産,手土産,産地直送,デザート,お菓子,雑貨,グルメ,お中元,お歳暮,成人祝い,入学祝,卒業祝い,餞別,結婚祝い,出産祝い,誕生日,成人祝い,昇進祝い,敬老の日,母の日,父の日,クリスマス,バレンタイン"
     />
     <!-- Open graph -->
-    <meta
-      property="og:title"
-      content="【楽天市場】Gift Of Taiwan [イベントページ]"
-    />
+    <meta property="og:title" content="【楽天市場】 [イベントページ]" />
     <meta
       property="og:description"
       content="台湾で人気のショップから、新商品が続々入荷！お得な商品やトレンド商品を要チェック。"
@@ -41,6 +38,10 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css"
     />
     <link
@@ -52,9 +53,8 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Main banner -->
     <div id="app">
-      
+      <!-- Top banner -->
       <div class="area">
         <div class="container top">
           <a href="#">
@@ -64,11 +64,28 @@
         </div>
       </div>
 
+      <!-- Special matsuri decoration -->
+      <div class="matsuri__block">
+        <a class="matsuri__box right" href="#" target="_blank">
+          <div
+            class="matsuri__banner marquee"
+            data-scroll
+            data-scroll-speed="-2"
+          ></div>
+        </a>
+        <a class="matsuri__box left" href="#" target="_blank">
+          <div
+            class="matsuri__banner marquee"
+            data-scroll
+            data-scroll-speed="-2"
+          ></div>
+        </a>
+      </div>
       <!-- Timer -->
       <div class="area timer">
         <div class="container">
           <div class="timer__block">
-            <div class="timer__title">
+            <div class="timer__title" data-aos="fade-up">
               <img
                 class="timer__icon"
                 src="images/clock.svg"
@@ -77,28 +94,44 @@
               <h3 class="timer__title__text">セール終了まで、あと</h3>
             </div>
             <div class="timer__content">
-              <div class="timer__box">
+              <div
+                class="timer__box"
+                data-aos="fade-up"
+                data-aos-duration="200"
+              >
                 <div class="timer__time">
                   <span class="timer__time__day day__ten">0</span>
                   <span class="timer__time__day day__digit">0</span>
                 </div>
                 <span class="timer__text">日</span>
               </div>
-              <div class="timer__box">
+              <div
+                class="timer__box"
+                data-aos="fade-up"
+                data-aos-duration="300"
+              >
                 <div class="timer__time">
                   <span class="timer__time__hour hour__ten">0</span>
                   <span class="timer__time__hour hour__digit">0</span>
                 </div>
                 <span class="timer__text">時間</span>
               </div>
-              <div class="timer__box">
+              <div
+                class="timer__box"
+                data-aos="fade-up"
+                data-aos-duration="400"
+              >
                 <div class="timer__time">
                   <span class="timer__time__minute minute__ten">0</span>
                   <span class="timer__time__minute minute__digit">0</span>
                 </div>
                 <span class="timer__text">分</span>
               </div>
-              <div class="timer__box">
+              <div
+                class="timer__box"
+                data-aos="fade-up"
+                data-aos-duration="500"
+              >
                 <div class="timer__time">
                   <span class="timer__time__second second__ten">0</span>
                   <span class="timer__time__second second__digit">0</span>
@@ -111,10 +144,16 @@
       </div>
 
       <!-- Navs -->
-      <div class="area nav">
+      <div id="Nav" class="area nav">
         <div class="container nav">
           <nav id="Navbar" class="nav__block">
-            <a class="nav__box" href="#">
+            <a
+              class="nav__box"
+              href="#"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="700"
+            >
               <div class="nav__text">
                 <h5>タイトル</h5>
               </div>
@@ -122,7 +161,13 @@
                 <i class="fas fa-chevron-circle-down"></i>
               </span>
             </a>
-            <a class="nav__box" href="#">
+            <a
+              class="nav__box"
+              href="#"
+              data-aos="fade-up"
+              data-aos-delay="150"
+              data-aos-duration="700"
+            >
               <div class="nav__text">
                 <h5>タイトル</h5>
               </div>
@@ -130,7 +175,13 @@
                 <i class="fas fa-chevron-circle-down"></i>
               </span>
             </a>
-            <a class="nav__box" href="#">
+            <a
+              class="nav__box"
+              href="#"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="700"
+            >
               <div class="nav__text">
                 <h5>タイトル</h5>
               </div>
@@ -138,7 +189,13 @@
                 <i class="fas fa-chevron-circle-down"></i>
               </span>
             </a>
-            <a class="nav__box" href="#">
+            <a
+              class="nav__box"
+              href="#"
+              data-aos="fade-up"
+              data-aos-delay="250"
+              data-aos-duration="700"
+            >
               <div class="nav__text">
                 <h5>タイトル</h5>
               </div>
@@ -146,7 +203,13 @@
                 <i class="fas fa-chevron-circle-down"></i>
               </span>
             </a>
-            <a class="nav__box" href="#">
+            <a
+              class="nav__box"
+              href="#"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="700"
+            >
               <div class="nav__text">
                 <h5>タイトル</h5>
               </div>
@@ -203,7 +266,7 @@
                 alt="main shop item image"
               />
             </div>
-            <div class="content__box coupon">
+            <div class="content__box coupon" data-aos="fade-up">
               <a class="content__ele" href="#">
                 <img
                   class="image"
@@ -271,7 +334,7 @@
             </div>
 
             <div class="content__box obvious">
-              <ul class="item__block top">
+              <ul class="item__block top" data-aos="fade-up">
                 <li class="item__box">
                   <a
                     target="_blank"
@@ -355,7 +418,7 @@
                   </div>
                 </li>
               </ul>
-              <ul class="item__block sub">
+              <ul class="item__block sub" data-aos="fade-up">
                 <li class="item__box">
                   <a
                     target="_blank"
@@ -710,7 +773,11 @@
               />
             </div>
 
-            <div class="content__box swiper__block swiper__1 swiper-no-swiping">
+            <div
+              class="content__box swiper__block swiper__1 swiper-no-swiping"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               <ul class="item__block sub swiper-wrapper swiper-no-swiping">
                 <li class="item__box swiper-slide">
                   <a
@@ -984,7 +1051,7 @@
               />
             </div>
 
-            <div class="content__box full-width">
+            <div class="content__box full-width" data-aos="fade-up">
               <ul class="item__block">
                 <li class="item__box">
                   <a
@@ -1172,10 +1239,11 @@
               <div class="search__block">
                 <div class="search__box">
                   <input
+                    v-model="searchValue"
                     type="text"
                     class="search__input"
-                    value=""
                     placeholder="SALE アイテム検索"
+                    @keyup.enter="searchSale"
                   />
                 </div>
               </div>
@@ -1184,6 +1252,9 @@
                 class="tag__block"
                 name="tag"
                 tag="div"
+                data-aos="zoom-in"
+                data-aos-easing="ease-in-out-cubic"
+                data-aos-duration="1000"
               >
                 <a
                   v-for="tag in tags"
@@ -1218,20 +1289,63 @@
         </div>
       </div>
 
-
+      <!-- Footer -->
+      <footer class="area">
+        <div class="container full">
+          <div class="footer__block">
+            <img
+              class="image footer__image flow pc"
+              src="images/guide_00.jpg"
+              loading="lazy"
+              data-aos="fade-up"
+            />
+            <div class="footer__box">
+              <div class="footer__title">
+                <span data-aos="fade-right" data-aos-delay="400">
+                  ショッピングガイド
+                </span>
+                <h3 data-aos="fade-left" data-aos-delay="100">
+                  SHOPPING GUIDE
+                </h3>
+              </div>
+              <img
+                class="image footer__image pc sp"
+                src="images/guide_01.png"
+                loading="lazy"
+                data-aos="fade-left"
+                data-aos-delay="100"
+                data-aos-easing="ease-in-out-cubic"
+              />
+              <img
+                class="image footer__image pc"
+                src="images/guide_02.png"
+                loading="lazy"
+                data-aos="fade-left"
+                data-aos-delay="200"
+                data-aos-easing="ease-in-out-cubic"
+              />
+              <img
+                class="image footer__image pc sp"
+                src="images/guide_03.png"
+                loading="lazy"
+                data-aos="fade-left"
+                data-aos-delay="300"
+                data-aos-easing="ease-in-out-cubic"
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
-    <script
-      src="https://kit.fontawesome.com/9188edaa95.js"
-      crossorigin="anonymous"
-    ></script>
     <script src="https://unpkg.com/vue@next"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
     <script src="js/swiper.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.js"></script>
+    <script src="https://kit.fontawesome.com/9188edaa95.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js"></script>
     <script src="js/main.js"></script>
     <script>
       // Set time format YYYY-MM-DD hh:mm
@@ -1285,16 +1399,27 @@
         data() {
           return {
             tags,
+            searchValue: null,
           }
         },
         mounted() {
           this.shuffle()
           this.countloop()
           this.setSwiper()
-          // main.js
+          this.setMarquee()
+          // this.setLocomotiveScroll()
           this.addMoreExpension()
+          const AOSParams = { once: true, }
+          AOS.init(AOSParams)
         },
         methods: {
+          searchSale() {
+            if (this.searchValue)
+              return console.log(
+                `Search keyword: %c${this.searchValue}`,
+                consoleStyle,
+              )
+          },
           shuffle() {
             setInterval(() => {
               this.tags = _.shuffle(this.tags)
@@ -1312,25 +1437,79 @@
               })
             })
           },
+          setLocomotiveScroll() {
+            const LocomotiveScrollParams = {
+              el: document.querySelector('body'),
+              smooth: true,
+              repeat: true,
+              lerp: 0.05,
+              tablet: {
+                smooth: true,
+                breakpoint: 550,
+              },
+              smartphone: {
+                smooth: false,
+              },
+            }
+            const scroll = new LocomotiveScroll(LocomotiveScrollParams)
+          },
+          setMarquee() {
+            const Marquees = document.querySelectorAll('.marquee')
+            let offset = 0
+            let scrollHeight = 0
+            let navTop = $('#Nav').offset().top
+            $(window).resize(() => {
+              navTop = $('#Nav').offset().top
+            })
+            const setOffset = () => {
+              marqueeMove()
+              if (scrollHeight < window.scrollY) {
+                scrollHeight = window.scrollY
+                offset -= 3
+              } else {
+                scrollHeight = window.scrollY
+                offset += 3
+              }
+              if ($(window).scrollTop() >= navTop)
+                return $('#Navbar').addClass('nav--fixed')
+              $('#Navbar').removeClass('nav--fixed')
+            }
+            const plusOffset = () => {
+              offset += 0.6
+              marqueeMove()
+              window.requestAnimationFrame(plusOffset)
+            }
+            const marqueeMove = () => {
+              Marquees.forEach((m) => {
+                m.style.backgroundPositionY = offset + 'px'
+              })
+            }
+            window.requestAnimationFrame(plusOffset)
+            window.addEventListener('scroll', setOffset)
+          },
           setSwiper() {
             const swiperParams = {
               slidesPerView: 3,
               spaceBetween: 30,
+              touchRatio: 0.5,
+              longSwipesRatio : 0.5,
               grabCursor: true,
+              // followFinger: false,
               loop: true,
-              noSwiping: true,
-              speed: 8000,
-              freeMode: true,
+              noSwiping: false,
+              speed: 5000,
+              freeMode: false,
               autoplay: 1,
               autoplayDisableOnInteraction: false,
               breakpoints: {
                 576: {
-                  slidesPerView: 1,
+                  slidesPerView: 'auto',
                   spaceBetween: 0,
                 },
                 768: {
-                  slidesPerView: 1,
+                  slidesPerView: 'auto',
                   spaceBetween: 0,
+                  // noSwiping: false,
                 },
                 1280: {
                   slidesPerView: 2,
@@ -1354,6 +1533,7 @@
           },
         },
       }).mount('#app')
+      const consoleStyle = "font-weight: bold; font-size: 1.05rem; font-family: '微軟正黑體'; color: #ffb93e;"
     </script>
   </body>
 </html>

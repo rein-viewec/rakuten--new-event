@@ -37,20 +37,60 @@ $fourth: #f9dc5c
         padding: 0
     &.nav
         max-width: 100%
-        min-height: 116px
+        min-height: 68px
 
 .top
     &__banner
         &.sp
             display: none
-            
+
+.matsuri
+    &__block
+        user-select: none
+    &__box
+        +flex
+        position: fixed
+        width: 60px
+        height: 100000vh
+        background-color: #ffffff9c
+        top: 0
+        z-index: 99
+        &.right
+            right: 20px
+        &.left
+            left: 20px
+    &__banner
+        +flex
+        +trs(80ms)
+        position: relative
+        top: 0
+        height: 100%
+        background-repeat: repeat-y
+        background-position: top
+        background-size: 100%
+        background-image: url('../images/matsuri.jpg')
+    &__text
+        +flex
+        flex-wrap: nowrap
+        transform: rotate(90deg)
+        width: 100%
+        height: 300px
+        color: $thirdly
+        font-size: 2rem
+        div
+            +flex
+            min-width: 140px
+            font-weight: bold
+        span
+            font-weight: bold
+
 .timer
     &__block
         color: $secondary
         padding: 32px
     &__title
         +flex
-        font-size: 2rem
+        font-size: 1.75rem
         &__text
             +zenKakuGothicNew
     &__icon
@@ -66,7 +106,8 @@ $fourth: #f9dc5c
     &__time
         > span
             color: $primary
-            font-size: 4.25rem
+            font-size: 4rem
+            margin: 0 3px 0
             +bahnschrift(400)
             position: relative
             z-index: 5
@@ -91,7 +132,7 @@ $fourth: #f9dc5c
     &__block
         +flex
         +a
-        padding: 28px 0
+        padding: 18px 0
         background-color: $secondary
         &.nav--fixed
             position: fixed
@@ -124,7 +165,7 @@ $fourth: #f9dc5c
         min-height: 36px
         color: $primary
         font-weight: bold
-        font-size: 2rem
+        font-size: 1.75rem
         h5
             +break
     &__icon
@@ -371,10 +412,11 @@ $fourth: #f9dc5c
         +flex
     &__input
         +zenKakuGothicNew
+        border-radius: 12px
         text-align: center
         flex: 1 0
         background-color: #facac8
-        min-height: 56px
+        min-height: 72px
         grid-area: field
         padding-bottom: 6px
         position: relative
@@ -383,7 +425,7 @@ $fourth: #f9dc5c
         font-weight: bold
         &::placeholder
             color: $primary
-            font-weight: normal
+            font-weight: bold
 
 .tag
     &__block
@@ -424,11 +466,56 @@ $fourth: #f9dc5c
         max-width: 240px
         max-height: 240px
 
+.footer
+    &__block
+        +flex
+    &__box
+        +flex
+        max-width: 1280px
+        margin: 30px 0
+        position: relative
+        padding: 0 0 0 120px
+    &__image
+        width: 100%
+        max-width: 385px
+        padding: 20px
+        &.flow
+            padding: 0
+            max-width: 100%
+    &__title
+        +flex
+        width: 100%
+        max-width: 380px
+        height: 80px
+        transform: rotate(90deg)
+        position: absolute
+        left: -120px
+        top: 180px
+        span
+            +flex
+            +bahnschrift
+            color: #5e5e5e
+            font-weight: bold
+            padding: 0 0 0 15px
+            font-size: 1.25rem
+            justify-content: start
+            text-align: left
+        h3
+            +bahnschrift
+            font-size: 3rem
+            font-weight: bold
+            color: $thirdly
+
+
 @media all and (max-width: 1280px)
     .container
         &.nav
             max-width: 100%
-            min-height: 138px
+            min-height: 118px
+
+    .matsuri
+        &__block
+            display: none
 
     .nav
         &__box
@@ -493,6 +580,18 @@ $fourth: #f9dc5c
                 max-width: 240px
                 margin: 4px
 
+    .footer
+        &__box
+            margin: 20px 0
+            padding: 0
+        &__title
+            display: none
+        &__image
+            max-width: 33%
+            padding: 10px
+            &.flow
+                display: none
+
 @media all and (max-width: 980px)
     .full-width
         .item
@@ -504,7 +603,15 @@ $fourth: #f9dc5c
             &__price
                 justify-content: space-between
                 font-size: 12vw
-
+    .footer
+        &__image
+            max-width: 100%
+            padding: 30px
+            &.pc
+                display: none
+            &.sp
+                display: inline-block
+        
 @media all and (max-width: 768px)
     .container
         &.top
