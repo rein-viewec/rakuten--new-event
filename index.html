@@ -270,34 +270,6 @@
               <a class="content__ele" href="#">
                 <img
                   class="image"
-                  src="https://image.rakuten.co.jp/twdirect/cabinet/08866562/20220523_father/05_carplay30v3_240.jpg"
-                  alt="main shop item image"
-                />
-              </a>
-              <a class="content__ele" href="#">
-                <img
-                  class="image"
-                  src="https://image.rakuten.co.jp/twdirect/cabinet/08866562/20220523_father/05_urbaner10_240v2.jpg"
-                  alt="main shop item image"
-                />
-              </a>
-              <a class="content__ele" href="#">
-                <img
-                  class="image"
-                  src="https://image.rakuten.co.jp/twdirect/cabinet/08866562/20220523_father/05_ab6530_240v2.jpg"
-                  alt="main shop item image"
-                />
-              </a>
-              <a class="content__ele" href="#">
-                <img
-                  class="image"
-                  src="https://image.rakuten.co.jp/twdirect/cabinet/08866562/20220523_father/05_carplay30v3_240.jpg"
-                  alt="main shop item image"
-                />
-              </a>
-              <a class="content__ele" href="#">
-                <img
-                  class="image"
                   src="https://image.rakuten.co.jp/twdirect/cabinet/08866562/20220523_father/05_urbaner10_240v2.jpg"
                   alt="main shop item image"
                 />
@@ -1338,13 +1310,17 @@
       </footer>
     </div>
 
-    <script src="https://unpkg.com/vue@next"></script>
+    <script
+      src="https://kit.fontawesome.com/9188edaa95.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="https://unpkg.com/vue@3.2.36/dist/vue.global.prod.js"></script> -->
+    <script src="js/vue.global.prod.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
     <script src="js/swiper.min.js"></script>
-    <script src="https://kit.fontawesome.com/9188edaa95.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js"></script>
     <script src="js/main.js"></script>
     <script>
@@ -1409,7 +1385,7 @@
           this.setMarquee()
           // this.setLocomotiveScroll()
           this.addMoreExpension()
-          const AOSParams = { once: true, }
+          const AOSParams = { once: true }
           AOS.init(AOSParams)
         },
         methods: {
@@ -1492,7 +1468,7 @@
               slidesPerView: 3,
               spaceBetween: 30,
               touchRatio: 0.5,
-              longSwipesRatio : 0.5,
+              longSwipesRatio: 0.5,
               grabCursor: true,
               // followFinger: false,
               loop: true,
@@ -1533,7 +1509,8 @@
           },
         },
       }).mount('#app')
-      const consoleStyle = "font-weight: bold; font-size: 1.05rem; font-family: '微軟正黑體'; color: #ffb93e;"
+      const consoleStyle =
+        "font-weight: bold; font-size: 1.05rem; font-family: '微軟正黑體'; color: #ffb93e;"
     </script>
   </body>
 </html>

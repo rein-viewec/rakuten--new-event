@@ -267,7 +267,8 @@ $fourth: #f9dc5c
             +flex
             min-height: 110%
             position: absolute
-            outline: 2px solid
+            // outline: 2px solid
+            
             border-radius: 8px
             top: 2px
             right: 0
@@ -284,7 +285,8 @@ $fourth: #f9dc5c
         &.primary
             background-color: $primary
             &::before
-                outline-color: $primary
+                box-shadow: 0 0 0 2px $primary
+                // outline-color: $primary
             &::after
                 content: '›'
                 padding: 0 5px 0px 0
@@ -292,7 +294,8 @@ $fourth: #f9dc5c
         &.gray
             background-color: #313131
             &::before
-                outline-color: #313131
+                box-shadow: 0 0 0 2px #313131
+                // outline-color: #313131
             &::after
                 content: '+'
     &__price

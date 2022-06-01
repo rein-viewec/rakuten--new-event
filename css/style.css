@@ -775,7 +775,6 @@
   width: 100%;
   min-height: 110%;
   position: absolute;
-  outline: 2px solid;
   border-radius: 8px;
   top: 2px;
   right: 0;
@@ -800,7 +799,8 @@
 }
 
 .item__button.primary::before {
-  outline-color: #ee504d;
+  -webkit-box-shadow: 0 0 0 2px #ee504d;
+          box-shadow: 0 0 0 2px #ee504d;
 }
 
 .item__button.primary::after {
@@ -814,7 +814,8 @@
 }
 
 .item__button.gray::before {
-  outline-color: #313131;
+  -webkit-box-shadow: 0 0 0 2px #313131;
+          box-shadow: 0 0 0 2px #313131;
 }
 
 .item__button.gray::after {
