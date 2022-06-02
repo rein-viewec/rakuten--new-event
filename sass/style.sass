@@ -49,6 +49,7 @@ $fourth: #f9dc5c
         user-select: none
     &__box
         +flex
+        box-shadow: 0 0 60px #0000001f
         position: fixed
         width: 60px
         height: 100000vh
@@ -132,7 +133,7 @@ $fourth: #f9dc5c
     &__text
         +zenKakuGothicNew
         font-size: 2em
-        padding: 0 12px 8px 0px
+        padding: 0 12px 8px 2px
     &--hide
         display: none
 
@@ -187,12 +188,13 @@ $fourth: #f9dc5c
 .content
     &__block
         +flex
-        margin: 50px 0
+        margin: 30px 0 40px
         max-width: 1280px
     &__title
         +flex
     &__item
         +flex
+        margin: 12px 0
     &__box
         +flex
         margin: 48px 0
@@ -205,9 +207,9 @@ $fourth: #f9dc5c
         +b
         +bahnschrift(600)
         background-color: $primary
-        padding: 26px 20px
-        margin: 20px
-        font-size: 2rem
+        padding: 18px 20px
+        margin: 16px
+        font-size: 1.5rem
         text-align: center
         border-radius: 10px
         color: $secondary
@@ -425,25 +427,42 @@ $fourth: #f9dc5c
 .search
     &__block
         +flex
-        padding: 20px
+        padding: 24px
     &__box
         +flex
+        position: relative
     &__input
+        +flex
         +zenKakuGothicNew
         border-radius: 12px
-        text-align: center
-        flex: 1 0
+        text-align: left
+        padding: 15px 100px 15px 25px
         border: 2px solid $thirdly
         min-height: 72px
-        grid-area: field
         position: relative
         font-size: 1.5rem
         color: $primary
         font-weight: bold
+        position: relative
         &::placeholder
             +zenKakuGothicNew
             color: $primary
-            font-weight: bold
+    &__submit
+        +flex
+        +hov(0.7)
+        +pressY(1px)
+        z-index: 1
+        color: $thirdly
+        font-size: 2rem
+        max-width: 100px
+        height: 100%
+        max-height: 100px
+        position: absolute
+        right: 5px
+        top: 0
+        bottom: 0
+        margin: auto
+        cursor: pointer
 
 .tag
     &__block
@@ -535,14 +554,27 @@ $fourth: #f9dc5c
 .gotop
     &__box
         +flex
-        position: absolute
-        bottom: 20px
+        +hov
+        position: fixed
+        z-index: 99
+        bottom: 45px
         right: 100px
         height: 100%
-        max-width: 80px
-        max-height: 80px
+        max-width: 45px
+        max-height: 45px
+        font-size: 1.5rem
+        color: $secondary
+        cursor: pointer
         background-color: #00000057
+        border-radius: 3px
+        i
+            padding: 0 0 5px 0
 
+
+@media all and (max-width: 1340px)
+    .search
+        &__block
+            max-width: 86%
 
 @media all and (max-width: 1280px)
     .container
@@ -562,8 +594,9 @@ $fourth: #f9dc5c
     .content
         &__block
             margin: 24px 0
-
-    // $itemWidth
+        &__button
+            padding: 16px 4px
+            font-size: 1rem
     .item
         &__box
             $marginW: 1%
@@ -628,6 +661,7 @@ $fourth: #f9dc5c
     .matsuri
         &__block
             display: none
+
     .full-width
         .item
             &__body
@@ -646,6 +680,10 @@ $fourth: #f9dc5c
                 display: none
             &.sp
                 display: inline-block
+
+    .gotop
+        &__box
+            right: 30px
 
 @media all and (max-width: 768px)
     .container
@@ -722,19 +760,32 @@ $fourth: #f9dc5c
         &__text
             font-size: 0.5rem
 
-
     .item
         &__button
             padding: 8px 0
             margin: 6px 0
             &:after
                 display: none
+
     .obvious
         .top
             .item
                 &__price
                     span
                         font-size: 1.25rem
+
+    .search
+        &__block
+            padding: 8px 6px
+            max-width: 100%
+        &__input
+            padding: 10px 60px 10px 10px
+            width: 100%
+            font-size: 1.25rem
+        &__submit
+            font-size: 1.5rem
+            max-width: 60px
+            max-height: 60px
 
 @media all and (max-width: 400px)
     .item

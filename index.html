@@ -31,10 +31,10 @@
     <meta property="og:image:height" content="280" />
     <title>Event page new</title>
     <link rel="icon" href="images/favicon.png" sizes="64x64" />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+    /> -->
     <link
       rel="stylesheet"
       href="css/splide.min.css"
@@ -47,10 +47,6 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
     />
     <!-- <link
       rel="stylesheet"
@@ -167,7 +163,7 @@
                 <h5>
                   タイトル
                   <br />
-                  タイトル
+                  前言
                 </h5>
               </div>
               <span class="nav__icon">
@@ -176,7 +172,7 @@
             </a>
             <a
               class="nav__box"
-              href="#"
+              href="#Coupon"
               data-aos="fade-up"
               data-aos-delay="150"
               data-aos-duration="700"
@@ -185,7 +181,7 @@
                 <h5>
                   タイトル
                   <br />
-                  タイトル
+                  Coupon
                 </h5>
               </div>
               <span class="nav__icon">
@@ -194,7 +190,7 @@
             </a>
             <a
               class="nav__box"
-              href="#"
+              href="#SlideItem"
               data-aos="fade-up"
               data-aos-delay="200"
               data-aos-duration="700"
@@ -203,7 +199,7 @@
                 <h5>
                   タイトル
                   <br />
-                  タイトル
+                  Slide items
                 </h5>
               </div>
               <span class="nav__icon">
@@ -212,7 +208,7 @@
             </a>
             <a
               class="nav__box"
-              href="#"
+              href="#FullItem"
               data-aos="fade-up"
               data-aos-delay="250"
               data-aos-duration="700"
@@ -221,7 +217,7 @@
                 <h5>
                   タイトル
                   <br />
-                  タイトル
+                  Full items
                 </h5>
               </div>
               <span class="nav__icon">
@@ -230,7 +226,7 @@
             </a>
             <a
               class="nav__box"
-              href="#"
+              href="#Tags"
               data-aos="fade-up"
               data-aos-delay="300"
               data-aos-duration="700"
@@ -239,7 +235,7 @@
                 <h5>
                   タイトル
                   <br />
-                  タイトル
+                  Tags
                 </h5>
               </div>
               <span class="nav__icon">
@@ -327,7 +323,7 @@
       </div>
 
       <!-- Content block C - Obvious blocks -->
-      <div class="area">
+      <div id="Coupon" class="area">
         <div class="container">
           <div class="content__block">
             <div class="content__title">
@@ -686,7 +682,7 @@
       </div>
 
       <!-- Content block D - Slide blocks -->
-      <div class="area">
+      <div id="SlideItem" class="area">
         <div class="container">
           <div class="content__block">
             <div class="content__title">
@@ -965,7 +961,7 @@
       </div>
 
       <!-- Content block E - Full width blocks -->
-      <div class="area">
+      <div id="FullItem" class="area">
         <div class="container">
           <div class="content__block">
             <div class="content__title">
@@ -1151,7 +1147,7 @@
       </div>
 
       <!-- Content block F - Tags & links -->
-      <div class="area">
+      <div id="Tags" class="area">
         <div class="container">
           <div class="content__block content__tags">
             <div class="content__title">
@@ -1169,9 +1165,12 @@
                     v-model="searchValue"
                     type="text"
                     class="search__input"
-                    placeholder="SALEアイテム検索 &#xf002 "
+                    placeholder="SALEアイテム検索"
                     @keyup.enter="searchSale"
                   />
+                  <div class="search__submit" @click="searchSale">
+                    <i class="fas fa-search"></i>
+                  </div>
                 </div>
               </div>
               <transition-group
@@ -1267,12 +1266,11 @@
         </div>
       </footer>
 
-      <!-- <div id="#GoTop" class="gotop__box">
+      <div id="GoTop" class="gotop__box">
         <div class="gotop__ele">
           <i class="fas fa-angle-up"></i>
-          <i class="fas fa-angle-down"></i>
         </div>
-      </div> -->
+      </div>
 
     </div>
 
@@ -1349,7 +1347,7 @@
           this.shuffle()
           this.countloop()
           this.setSplide()
-          this.setMarquee()
+          this.setScrollEffect()
           this.setAOS()
           // this.setLocomotiveScroll()
           // this.addMoreExpension()
@@ -1396,16 +1394,29 @@
             }
             const scroll = new LocomotiveScroll(LocomotiveScrollParams)
           },
-          setMarquee() {
+          setScrollEffect() {
             const Marquees = document.querySelectorAll('.marquee')
             const body = document.querySelector('body')
             let offset = 0
             let scrollHeight = 0
             let navTop = $('#Nav').offset().top
-            let NavHeight = $('#Navbar').height()
+            let NavHeight = $('#Nav').height()
+            $('#Navbar').on('click', 'a', function(e) {
+              e.preventDefault()
+              const anchor = $(this).attr('href')
+              const anchorTop = $(anchor).offset().top
+              $('html, body').stop().animate({ 
+                scrollTop: anchorTop - NavHeight
+              },700)
+            })
+            $('#GoTop').on('click', () => {
+              $('html, body').animate({
+                scrollTop: 0,
+              }, 700)
+            })
             $(window).resize(() => {
               navTop = $('#Nav').offset().top
-              NavHeight = $('#Navbar').height()
+              NavHeight = $('#Nav').height()
             })
             const setOffset = () => {
               marqueeMove()
@@ -1415,6 +1426,11 @@
               } else {
                 scrollHeight = window.scrollY
                 offset += 3
+              }
+              if ($(window).scrollTop() >= 300) {
+                $('#GoTop').fadeIn()
+              } else {
+                $('#GoTop').fadeOut()
               }
               if ($(window).scrollTop() >= navTop) {
                 body.style.paddingTop = NavHeight + 'px'
