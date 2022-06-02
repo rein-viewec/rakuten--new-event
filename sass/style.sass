@@ -10,7 +10,7 @@ $thirdly: #d1322f
 $fourth: #f9dc5c
 
 @mixin zenKakuGothicNew($weight: 400)
-    font-family: 'Noto+Sans+JP', 'Zen Kaku Gothic New'
+    font-family: 'Noto+Sans+JP', FontAwesome, 'Zen Kaku Gothic New'
     font-weight: $weight
 
 @mixin bahnschrift($weight: 400)
@@ -37,7 +37,6 @@ $fourth: #f9dc5c
         padding: 0
     &.nav
         max-width: 100%
-        min-height: 68px
 
 .top
     &__banner
@@ -46,6 +45,7 @@ $fourth: #f9dc5c
 
 .matsuri
     &__block
+        pointer-events: none
         user-select: none
     &__box
         +flex
@@ -105,26 +105,34 @@ $fourth: #f9dc5c
         align-items: end
     &__time
         > span
+            display: inline-block
             color: $primary
             font-size: 4rem
-            margin: 0 3px 0
+            margin: 0 2px 0
+            min-width: 45px
+            padding: 0 2px
+            box-sizing: border-box
+            text-align: center
             +bahnschrift(400)
             position: relative
             z-index: 5
             &:before
                 content: ''
                 position: absolute
-                border-radius: 2.5px
+                border-radius: 4px
                 top: 0px
+                right: 0
+                left: 0
                 margin: auto
                 width: 100%
+                text-align: center
                 height: 90%
                 background-color: $secondary
                 z-index: -1
     &__text
+        +zenKakuGothicNew
         font-size: 2em
-        padding: 0 12px 8px 5px
-        font-weight: 400
+        padding: 0 12px 8px 0px
     &--hide
         display: none
 
@@ -132,15 +140,15 @@ $fourth: #f9dc5c
     &__block
         +flex
         +a
-        padding: 18px 0
+        padding: 6px 0
         background-color: $secondary
         &.nav--fixed
             position: fixed
             z-index: 100
             top: 0px
+            box-shadow: 0 0 20px #00000036
     &__box
         +flex
-        +hov
         max-width: calc(80% / 5)
         position: relative
         &:not(:last-child)::after
@@ -157,6 +165,8 @@ $fourth: #f9dc5c
             right: -1px
     &__text
         +flex
+        +trs
+        +hov(.75)
         padding: 0 28px 0
         overflow: hidden
         text-align: center
@@ -165,9 +175,11 @@ $fourth: #f9dc5c
         min-height: 36px
         color: $primary
         font-weight: bold
-        font-size: 1.75rem
+        font-size: 1.5rem
         h5
-            +break
+            +break(2)
+            padding: 0px
+            overflow: hidden
     &__icon
         font-size: 1.25rem
         color: $primary
@@ -203,9 +215,9 @@ $fourth: #f9dc5c
         transition: 100ms all ease-in-out
         user-select: none
         +pressY
-        box-shadow: 0px 8px 0 #db3f40
+        box-shadow: 0px 8px 0 #db3f40, 0 0 40px #00000036
         &:active
-            box-shadow: 0px 6px 0 #db3f40
+            box-shadow: 0px 6px 0 #db3f40, 0 0 40px #00000036
         i
             margin: 0 0 0 10px
     &__tags
@@ -215,12 +227,13 @@ $fourth: #f9dc5c
     &__block
         +flex
         justify-content: space-around
+        padding: 0 10px
     &__box
         +flex
         +zenKakuGothicNew
         border-radius: 15px
         padding: 2%
-        border: 3px solid #dbdbdb
+        border: 2px solid #b3b3b3
         color: #464646
         margin: 18px
         max-width: 30%
@@ -253,7 +266,7 @@ $fourth: #f9dc5c
         +pressY
         color: #ffffff
         padding: 16px 0
-        margin: 14px 0
+        margin: 11px 0
         font-size: 1.5rem
         background-color: $primary
         position: relative
@@ -265,10 +278,9 @@ $fourth: #f9dc5c
         &::before
             content: ''
             +flex
-            min-height: 110%
+            min-height: 105%
             position: absolute
             // outline: 2px solid
-            
             border-radius: 8px
             top: 2px
             right: 0
@@ -285,7 +297,7 @@ $fourth: #f9dc5c
         &.primary
             background-color: $primary
             &::before
-                box-shadow: 0 0 0 2px $primary
+                box-shadow: 0 0 0 1.5px $primary
                 // outline-color: $primary
             &::after
                 content: '›'
@@ -294,7 +306,7 @@ $fourth: #f9dc5c
         &.gray
             background-color: #313131
             &::before
-                box-shadow: 0 0 0 2px #313131
+                box-shadow: 0 0 0 1.5px #313131
                 // outline-color: #313131
             &::after
                 content: '+'
@@ -365,21 +377,21 @@ $fourth: #f9dc5c
     &__block
         overflow: hidden
         width: 100%
-        // height: 850px
         position: relative
         padding: 10px 0
         user-select: none
+        cursor: grab
+        &:active
+            cursor: grabbing
     &-wrapper
         justify-content: unset
         flex-wrap: nowrap
-        // width: 100%
-        // height: 100%
         z-index: 1
         display: flex
         transition-property: transform
         box-sizing: content-box
     &-slide
-        max-width: 320px
+        max-width: 396px
         height: auto
     &-button-prev,
     &-button-next
@@ -391,16 +403,19 @@ $fourth: #f9dc5c
         width: 40px
         height: 40px
         font-size: 0.5rem
+    a
+        cursor: pointer
 
 .more
     opacity: 1
     +trs
+    box-shadow: 0px 8px 0 #db3f40, 0 0 50px #00000036
     &__yellow
         background-color: $fourth
         color: #272727
-        box-shadow: 0px 8px 0 #d8bd46
+        box-shadow: 0px 8px 0 #d8bd46, 0 0 50px #00000036
         &:active
-            box-shadow: 0px 6px 0 #d8bd46
+            box-shadow: 0px 6px 0 #d8bd46, 0 0 50px #00000036
     &--active
         pointer-events: none
         opacity: 0
@@ -418,15 +433,15 @@ $fourth: #f9dc5c
         border-radius: 12px
         text-align: center
         flex: 1 0
-        background-color: #facac8
+        border: 2px solid $thirdly
         min-height: 72px
         grid-area: field
-        padding-bottom: 6px
         position: relative
         font-size: 1.5rem
         color: $primary
         font-weight: bold
         &::placeholder
+            +zenKakuGothicNew
             color: $primary
             font-weight: bold
 
@@ -478,6 +493,14 @@ $fourth: #f9dc5c
         margin: 30px 0
         position: relative
         padding: 0 0 0 120px
+    &__item
+        background-color: $primary
+        color: $secondary
+        +flex
+        padding: 8px 0
+        +bahnschrift
+        margin: 20px 0 0 0 
+        font-size: 1.5rem
     &__image
         width: 100%
         max-width: 385px
@@ -509,23 +532,29 @@ $fourth: #f9dc5c
             font-weight: bold
             color: $thirdly
 
+.gotop
+    &__box
+        +flex
+        position: absolute
+        bottom: 20px
+        right: 100px
+        height: 100%
+        max-width: 80px
+        max-height: 80px
+        background-color: #00000057
+
 
 @media all and (max-width: 1280px)
     .container
         &.nav
             max-width: 100%
-            min-height: 118px
-
-    .matsuri
-        &__block
-            display: none
 
     .nav
         &__box
             max-width: calc(100% / 5)
             // &:not(:last-child)::after
         &__text
-            padding: 18px 0
+            padding: 0
             font-size: 1.25rem
         &__icon
             color: $primary
@@ -596,6 +625,9 @@ $fourth: #f9dc5c
                 display: none
 
 @media all and (max-width: 980px)
+    .matsuri
+        &__block
+            display: none
     .full-width
         .item
             &__body
@@ -614,25 +646,34 @@ $fourth: #f9dc5c
                 display: none
             &.sp
                 display: inline-block
-        
+
 @media all and (max-width: 768px)
     .container
         &.top
-            height: 100vw
+            height: 130vw
             a
-                height: 100vw
-        &.nav
-            min-height: 96px
+                height: 130vw
+
     .top
         &__banner
             &.sp
                 display: block
             &.pc
                 display: none
+
+    .timer
+        &__block
+            padding: 24px
+        &__time
+            > span
+                font-size: 3rem
+                min-width: 35px
+
     .content
         &__box
             +flex
             margin: 16px 0
+
     .swiper
         &-button-prev,
         &-button-next
@@ -652,20 +693,40 @@ $fourth: #f9dc5c
                 width: 1px
         &__icon
             font-size: 0.75rem
+        &__text
+            font-size: 0.5rem
 
 @media all and (max-width: 576px)
     .timer
+        &__block
+            padding: 16px 12px
+        &__content
+            +flex
+            padding: 6px 0 0 2px
         &__title
-            font-size: 1.2rem
+            font-size: 0.8rem
+        &__icon
+            width: 25px
+            height: 25px
         &__time
             > span
-                font-size: 2rem
+                min-width: 15px
+                font-size: 1.5rem
         &__text
             padding: 0 6px 4px 3px
             font-size: 0.75em
 
+    .nav
+        &__block
+            padding: 6px 0
+        &__text
+            font-size: 0.5rem
+
+
     .item
         &__button
+            padding: 8px 0
+            margin: 6px 0
             &:after
                 display: none
     .obvious

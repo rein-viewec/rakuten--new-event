@@ -1181,11 +1181,11 @@
 html {
   font-family: 'Meiryo UI', 'MS Sans Serif';
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 html body {
   overflow: hidden;
-  scroll-behavior: smooth;
   font-size: .8em;
 }
 
