@@ -1390,7 +1390,6 @@
             let offset = 0
             let scrollHeight = 0
             let navTop = $('#Nav').offset().top
-            let NavHeight = $('#Navbar').height()
             $('#Navbar').on('click', 'a', function (e) {
               e.preventDefault()
               const anchor = $(this).attr('href')
@@ -1399,7 +1398,7 @@
                 .stop()
                 .animate(
                   {
-                    scrollTop: anchorTop - NavHeight,
+                    scrollTop: anchorTop - $('#Navbar').height(),
                   },
                   700,
                 )
@@ -1414,7 +1413,6 @@
             })
             $(window).resize(() => {
               navTop = $('#Nav').offset().top
-              NavHeight = $('#Navbar').height()
             })
             const setOffset = () => {
               marqueeMove()
