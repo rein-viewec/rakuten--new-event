@@ -31,14 +31,6 @@
     <meta property="og:image:height" content="280" />
     <title>Event page new</title>
     <link rel="icon" href="images/favicon.png" sizes="64x64" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    /> -->
-    <link
-      rel="stylesheet"
-      href="css/splide.min.css"
-    />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link
       rel="stylesheet"
@@ -48,13 +40,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@mdi/font@6.6.96/css/materialdesignicons.min.css"
     />
-    <!-- <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    /> -->
+    <link rel="stylesheet" href="css/splide.min.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/style.css?v=1.1" />
+    <link rel="stylesheet" href="css/style.css?v=1.2" />
+    <link rel="stylesheet" href="css/custom.css?v=1.0" />
   </head>
   <body>
     <div id="app">
@@ -701,7 +691,9 @@
               data-aos-duration="1000"
             >
               <div class="splide__track">
-                <ul class="item__block sub swiper-wrapper splide__list swiper-no-swiping">
+                <ul
+                  class="item__block sub swiper-wrapper splide__list swiper-no-swiping"
+                >
                   <li class="item__box swiper-slide splide__slide">
                     <a
                       target="_blank"
@@ -1194,19 +1186,19 @@
             </div>
 
             <div class="content__item">
-              <a hreg="#" target="_blank" class="content__button more">
-                <span>訂閱 EDM</span>
+              <a href="#" target="_blank" class="content__button more">
+                <span>EDM サブスク</span>
                 <i class="fas fa-chevron-circle-right"></i>
               </a>
               <a
-                hreg="#"
+                href="#"
                 target="_blank"
-                class="content__button more more__yellow"
+                class="content__button more more__secondary"
               >
-                <span>領取 COUPON</span>
+                <span>COUPON</span>
                 <i class="fas fa-chevron-circle-right"></i>
               </a>
-              <a hreg="#" target="_blank" class="content__button more">
+              <a href="#" target="_blank" class="content__button more">
                 <span>店鋪 TOP</span>
                 <i class="fas fa-chevron-circle-right"></i>
               </a>
@@ -1217,7 +1209,7 @@
 
       <!-- Footer -->
       <footer class="area">
-        <div class="container full">
+        <div class="container footer">
           <div class="footer__block">
             <img
               class="image footer__image flow pc"
@@ -1271,7 +1263,6 @@
           <i class="fas fa-angle-up"></i>
         </div>
       </div>
-
     </div>
 
     <script
@@ -1296,43 +1287,43 @@
       const tags = [
         {
           name: '#コスメ',
-          link: 'https://',
+          link: 'https://search.rakuten.co.jp/search/mall/コスメ/?sid=379923',
         },
         {
           name: '#雑貨・文房具',
-          link: 'https://',
+          link: 'https://search.rakuten.co.jp/search/mall/コスメ/?sid=379923',
         },
         {
           name: '#ソフトドリンク',
-          link: 'https://',
+          link: 'https://search.rakuten.co.jp/search/mall/コスメ/?sid=379923',
         },
         {
           name: '#ジュエリー・アクセサリー',
-          link: 'https://',
+          link: 'https://search.rakuten.co.jp/search/mall/コスメ/?sid=379923',
         },
         {
           name: '#スポーツ・車',
-          link: 'https://',
+          link: 'https://search.rakuten.co.jp/search/mall/コスメ/?sid=379923',
         },
         {
           name: '#ランキング入り',
-          link: 'https://',
+          link: 'https://search.rakuten.co.jp/search/mall/コスメ/?sid=379923',
         },
         {
           name: '#楽天Books',
-          link: 'https://',
+          link: 'https://search.rakuten.co.jp/search/mall/コスメ/?sid=379923',
         },
         {
           name: '#エンタメ・デジタル家電',
-          link: 'https://',
+          link: 'https://search.rakuten.co.jp/search/mall/コスメ/?sid=379923',
         },
         {
           name: '#グルメ',
-          link: 'https://',
+          link: 'https://search.rakuten.co.jp/search/mall/コスメ/?sid=379923',
         },
         {
           name: '#ファッション',
-          link: 'https://',
+          link: 'https://search.rakuten.co.jp/search/mall/コスメ/?sid=379923',
         },
       ]
       const VueApp = Vue.createApp({
@@ -1355,11 +1346,10 @@
         },
         methods: {
           searchSale() {
-            if (this.searchValue)
-              return console.log(
-                `Search keyword: %c${this.searchValue}`,
-                consoleStyle,
-              )
+            if (this.searchValue) {
+              const href = `https://search.rakuten.co.jp/search/mall/${this.searchValue}/?sid=379923`
+              window.open(href, '_blank')
+            }
           },
           shuffle() {
             setInterval(() => {
@@ -1400,23 +1390,31 @@
             let offset = 0
             let scrollHeight = 0
             let navTop = $('#Nav').offset().top
-            let NavHeight = $('#Nav').height()
-            $('#Navbar').on('click', 'a', function(e) {
+            let NavHeight = $('#Navbar').height()
+            $('#Navbar').on('click', 'a', function (e) {
               e.preventDefault()
               const anchor = $(this).attr('href')
               const anchorTop = $(anchor).offset().top
-              $('html, body').stop().animate({ 
-                scrollTop: anchorTop - NavHeight
-              },700)
+              $('html, body')
+                .stop()
+                .animate(
+                  {
+                    scrollTop: anchorTop - NavHeight,
+                  },
+                  700,
+                )
             })
             $('#GoTop').on('click', () => {
-              $('html, body').animate({
-                scrollTop: 0,
-              }, 700)
+              $('html, body').animate(
+                {
+                  scrollTop: 0,
+                },
+                700,
+              )
             })
             $(window).resize(() => {
               navTop = $('#Nav').offset().top
-              NavHeight = $('#Nav').height()
+              NavHeight = $('#Navbar').height()
             })
             const setOffset = () => {
               marqueeMove()
@@ -1433,7 +1431,7 @@
                 $('#GoTop').fadeOut()
               }
               if ($(window).scrollTop() >= navTop) {
-                body.style.paddingTop = NavHeight + 'px'
+                body.style.paddingTop = $('#Navbar').height() + 'px'
                 $('#Navbar').addClass('nav--fixed')
                 return
               }
@@ -1472,7 +1470,7 @@
               speed: 3000,
             }
             const splide1 = new Splide('.splide', splideParams)
-            splide1.mount( window.splide.Extensions )
+            splide1.mount(window.splide.Extensions)
           },
           setAOS() {
             const AOSParams = { once: true }

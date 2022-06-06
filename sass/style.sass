@@ -8,6 +8,7 @@ $primary: #ee504d
 $secondary: #fff4dc
 $thirdly: #d1322f
 $fourth: #f9dc5c
+$buttonShadowBlur: 20px
 
 @mixin zenKakuGothicNew($weight: 400)
     font-family: 'Noto+Sans+JP', FontAwesome, 'Zen Kaku Gothic New'
@@ -37,6 +38,10 @@ $fourth: #f9dc5c
         padding: 0
     &.nav
         max-width: 100%
+    &.footer
+        max-width: 100%
+        width: 100%
+        padding: 0 80px
 
 .top
     &__banner
@@ -205,7 +210,7 @@ $fourth: #f9dc5c
     &__button
         +flex
         +b
-        +bahnschrift(600)
+        +zenKakuGothicNew(600)
         background-color: $primary
         padding: 18px 20px
         margin: 16px
@@ -217,9 +222,9 @@ $fourth: #f9dc5c
         transition: 100ms all ease-in-out
         user-select: none
         +pressY
-        box-shadow: 0px 8px 0 #db3f40, 0 0 40px #00000036
+        box-shadow: 0px 8px 0 #db3f40, 0 0 $buttonShadowBlur #00000036
         &:active
-            box-shadow: 0px 6px 0 #db3f40, 0 0 40px #00000036
+            box-shadow: 0px 6px 0 #db3f40, 0 0 $buttonShadowBlur #00000036
         i
             margin: 0 0 0 10px
     &__tags
@@ -411,13 +416,13 @@ $fourth: #f9dc5c
 .more
     opacity: 1
     +trs
-    box-shadow: 0px 8px 0 #db3f40, 0 0 50px #00000036
-    &__yellow
+    box-shadow: 0px 8px 0 #db3f40, 0 0 $buttonShadowBlur #00000036
+    &__secondary
         background-color: $fourth
         color: #272727
-        box-shadow: 0px 8px 0 #d8bd46, 0 0 50px #00000036
+        box-shadow: 0px 8px 0 #d8bd46, 0 0 $buttonShadowBlur #00000036
         &:active
-            box-shadow: 0px 6px 0 #d8bd46, 0 0 50px #00000036
+            box-shadow: 0px 6px 0 #d8bd46, 0 0 $buttonShadowBlur #00000036
     &--active
         pointer-events: none
         opacity: 0
@@ -560,8 +565,8 @@ $fourth: #f9dc5c
         bottom: 45px
         right: 100px
         height: 100%
-        max-width: 45px
-        max-height: 45px
+        max-width: 50px
+        max-height: 50px
         font-size: 1.5rem
         color: $secondary
         cursor: pointer
@@ -658,6 +663,9 @@ $fourth: #f9dc5c
                 display: none
 
 @media all and (max-width: 980px)
+    .container
+        &.footer
+            padding: 0
     .matsuri
         &__block
             display: none

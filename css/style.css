@@ -68,6 +68,12 @@
   max-width: 100%;
 }
 
+.container.footer {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 80px;
+}
+
 .top__banner.sp {
   display: none;
 }
@@ -557,7 +563,7 @@
   display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'bahnschrift';
+  font-family: 'Noto+Sans+JP', FontAwesome, 'Zen Kaku Gothic New';
   font-weight: 600;
   background-color: #ee504d;
   padding: 18px 20px;
@@ -575,8 +581,8 @@
       -ms-user-select: none;
           user-select: none;
   transition: 100ms all ease-in-out;
-  -webkit-box-shadow: 0px 8px 0 #db3f40, 0 0 40px #00000036;
-          box-shadow: 0px 8px 0 #db3f40, 0 0 40px #00000036;
+  -webkit-box-shadow: 0px 8px 0 #db3f40, 0 0 20px #00000036;
+          box-shadow: 0px 8px 0 #db3f40, 0 0 20px #00000036;
 }
 
 .content__button:hover {
@@ -592,8 +598,8 @@
 }
 
 .content__button:active {
-  -webkit-box-shadow: 0px 6px 0 #db3f40, 0 0 40px #00000036;
-          box-shadow: 0px 6px 0 #db3f40, 0 0 40px #00000036;
+  -webkit-box-shadow: 0px 6px 0 #db3f40, 0 0 20px #00000036;
+          box-shadow: 0px 6px 0 #db3f40, 0 0 20px #00000036;
 }
 
 .content__button i {
@@ -1057,20 +1063,20 @@
   -webkit-transition: 100ms all ease-in-out;
   -o-transition: 100ms all ease-in-out;
   transition: 100ms all ease-in-out;
-  -webkit-box-shadow: 0px 8px 0 #db3f40, 0 0 50px #00000036;
-          box-shadow: 0px 8px 0 #db3f40, 0 0 50px #00000036;
+  -webkit-box-shadow: 0px 8px 0 #db3f40, 0 0 20px #00000036;
+          box-shadow: 0px 8px 0 #db3f40, 0 0 20px #00000036;
 }
 
-.more__yellow {
+.more__secondary {
   background-color: #f9dc5c;
   color: #272727;
-  -webkit-box-shadow: 0px 8px 0 #d8bd46, 0 0 50px #00000036;
-          box-shadow: 0px 8px 0 #d8bd46, 0 0 50px #00000036;
+  -webkit-box-shadow: 0px 8px 0 #d8bd46, 0 0 20px #00000036;
+          box-shadow: 0px 8px 0 #d8bd46, 0 0 20px #00000036;
 }
 
-.more__yellow:active {
-  -webkit-box-shadow: 0px 6px 0 #d8bd46, 0 0 50px #00000036;
-          box-shadow: 0px 6px 0 #d8bd46, 0 0 50px #00000036;
+.more__secondary:active {
+  -webkit-box-shadow: 0px 6px 0 #d8bd46, 0 0 20px #00000036;
+          box-shadow: 0px 6px 0 #d8bd46, 0 0 20px #00000036;
 }
 
 .more--active {
@@ -1506,8 +1512,8 @@
   bottom: 45px;
   right: 100px;
   height: 100%;
-  max-width: 45px;
-  max-height: 45px;
+  max-width: 50px;
+  max-height: 50px;
   font-size: 1.5rem;
   color: #fff4dc;
   cursor: pointer;
@@ -1622,6 +1628,9 @@
 }
 
 @media all and (max-width: 980px) {
+  .container.footer {
+    padding: 0;
+  }
   .matsuri__block {
     display: none;
   }

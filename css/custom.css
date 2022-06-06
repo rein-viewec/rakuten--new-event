@@ -1,0 +1,76 @@
+:root {
+  --primary: #ee504d;
+  --secondary: #fff4dc;
+  --thirdly: #d1322f;
+  --fourth: #f9dc5c;
+}
+
+/* -------倒數計時器-------- */
+.area.timer {
+  background-color: var(--primary);
+}
+/* 倒數計時器 標題 */
+.area.timer .timer__title {
+  color: var(--secondary);
+}
+/* 倒數計時器 時間 */
+.area.timer .timer__time > span {
+  color: var(--primary);
+}
+/* 倒數計時器 時間背景顏色 */
+.area.timer .timer__time > span::before {
+  background-color: var(--secondary);
+}
+/* 倒數計時器 時間單位 */
+.area.timer .timer__text {
+  color: var(--secondary);
+}
+
+/* -------頂部導航區塊-------- */
+.area.nav .nav__block {
+  background-color: var(--secondary);
+}
+/* 頂部導航區塊 按鈕 */
+.area.nav .nav__box {
+  background-color: #00000000;
+}
+/* 頂部導航區塊 文字 */
+.area.nav .nav__text,
+.area.nav .nav__icon {
+  color: var(--primary);
+}
+
+/* -------看更多 按鈕-------- */
+.content__button {
+  background-color: var(--primary);
+  color: var(--secondary);
+  box-shadow: 0px 8px 0 var(--thirdly), 0 0 20px #00000036;
+}
+/* 看更多 按鈕 第二樣式 */
+.content__button.more__secondary {
+  background-color: var(--fourth);
+  color: #2e2e2e;
+  box-shadow: 0px 8px 0 #d8bd46, 0 0 20px #00000036;
+}
+.content__button.more__secondary:active {
+  box-shadow: 0px 6px 0 #d8bd46, 0 0 20px #00000036;
+}
+
+/* -------搜尋 Bar-------- */
+.search__block .search__input {
+  border-color: var(--primary);
+}
+/* 搜尋 Bar 輸入提示 */
+.search__block .search__input::placeholder {
+  color: var(--primary);
+}
+/* 搜尋 Bar 搜尋icon */
+.search__block .search__submit {
+  color: var(--primary);
+}
+
+/* --------Tags 關鍵字標籤-------- */
+.tag__block a {
+  color: var(--primary);
+  border-color: var(--primary);
+}
