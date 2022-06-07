@@ -146,13 +146,19 @@ $buttonShadowBlur: 20px
     &__block
         +flex
         +a
+        transition: all 450ms ease-in-out
+        top: -75px
         padding: 6px 0
         background-color: $secondary
+        box-shadow: 0 0 0px #00000000
         &.nav--fixed
             position: fixed
             z-index: 100
             top: 0px
             box-shadow: 0 0 20px #00000036
+            .nav__icon
+                bottom: 0px
+                position: relative
     &__box
         +flex
         max-width: calc(80% / 5)
@@ -189,6 +195,8 @@ $buttonShadowBlur: 20px
     &__icon
         font-size: 1.25rem
         color: $primary
+        transition: all 750ms ease-in-out
+        bottom: 30px
 
 .content
     &__block
@@ -513,25 +521,66 @@ $buttonShadowBlur: 20px
         +flex
     &__box
         +flex
+        flex-wrap: nowrap
+        align-items: start
         max-width: 1280px
         margin: 30px 0
         position: relative
         padding: 0 0 0 120px
     &__item
+        +flex
+        +bahnschrift
         background-color: $primary
         color: $secondary
-        +flex
-        padding: 8px 0
-        +bahnschrift
+        padding: 14px 0
         margin: 20px 0 0 0 
         font-size: 1.5rem
+    &__content
+        +zenKakuGothicNew
+        box-sizing: border-box
+        color: #444444
+        margin: 10px
+        line-height: 1.5rem
+        width: 100%
+        max-width: 31%
+        font-size: 0.9rem
+        padding: 34px
+        background-color: #facac9
+        border-radius: 50px
+        height: 100%
+        min-height: 700px
+        a
+            +hov
+            text-decoration: underline
+            font-weight: bold
+            color: #251919
+    &__sub
+        font-weight: bold
+        color: $primary
+        font-size: 1.5rem
+        padding: 18px 0 
+        line-height: unset
+    &__list
+        +flex
+        padding: 0
+        margin: 0
+        li
+            +flex
+            justify-content: start
+            align-items: center
+            text-align: left
+        img, span
+            +ib
+            width: 20px
+            height: 20px
+            padding: 2px 4px 0 0
     &__image
         width: 100%
-        max-width: 385px
-        padding: 20px
-        &.flow
-            padding: 0
-            max-width: 100%
+        max-width: 240px
+        margin: 16px 0
+    &__flow
+        width: 100%
+        max-width: 100%
     &__title
         +flex
         width: 100%
@@ -602,6 +651,7 @@ $buttonShadowBlur: 20px
         &__button
             padding: 16px 4px
             font-size: 1rem
+
     .item
         &__box
             $marginW: 1%
@@ -656,16 +706,14 @@ $buttonShadowBlur: 20px
             padding: 0
         &__title
             display: none
-        &__image
-            max-width: 33%
-            padding: 10px
-            &.flow
-                display: none
+        &__sub
+            font-size: 1.25rem
 
 @media all and (max-width: 980px)
     .container
         &.footer
             padding: 0
+
     .matsuri
         &__block
             display: none
@@ -680,7 +728,13 @@ $buttonShadowBlur: 20px
             &__price
                 justify-content: space-between
                 font-size: 12vw
+
+    .search
+        &__block
+            max-width: 100%
     .footer
+        &__box
+            flex-wrap: wrap
         &__image
             max-width: 100%
             padding: 30px
@@ -688,6 +742,12 @@ $buttonShadowBlur: 20px
                 display: none
             &.sp
                 display: inline-block
+        &__content
+            max-width: 47%
+            min-height: 580px
+            &:nth-child(2)
+                max-width: 100%
+                min-height: unset
 
     .gotop
         &__box
@@ -742,6 +802,13 @@ $buttonShadowBlur: 20px
         &__text
             font-size: 0.5rem
 
+    .footer
+        &__flow
+            display: none
+        &__content
+            max-width: 100%
+            min-height: unset
+
 @media all and (max-width: 576px)
     .timer
         &__block
@@ -787,7 +854,7 @@ $buttonShadowBlur: 20px
             padding: 8px 6px
             max-width: 100%
         &__input
-            padding: 10px 60px 10px 10px
+            padding: 10px 60px 10px 15px
             width: 100%
             font-size: 1.25rem
         &__submit
