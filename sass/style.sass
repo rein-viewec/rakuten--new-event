@@ -226,6 +226,7 @@ $buttonShadowBlur: 20px
         background-color: $primary
         padding: 18px 20px
         margin: 16px
+        max-width: 1120px
         font-size: 1.5rem
         text-align: center
         border-radius: 10px
@@ -251,7 +252,7 @@ $buttonShadowBlur: 20px
         +flex
         +zenKakuGothicNew
         border-radius: 15px
-        padding: 1%
+        padding: 2% 1%
         background: #f5f5f5
         color: #464646
         margin: 18px
@@ -449,6 +450,7 @@ $buttonShadowBlur: 20px
     &__input
         +flex
         +zenKakuGothicNew
+        max-width: 1120px
         border-radius: 12px
         text-align: left
         padding: 15px 100px 15px 25px
@@ -680,6 +682,26 @@ $buttonShadowBlur: 20px
             padding: 16px 4px
             font-size: 1rem
 
+    .coupon
+        .content
+            &__ele
+                width: 28%
+                max-width: 240px
+                margin: 4px
+
+    .footer
+        &__box
+            margin: 20px 0
+            padding: 0
+        &__title
+            display: none
+        &__sub
+            font-size: 1.25rem
+        &__flow
+            &__title
+                font-size: 1rem
+
+@media all and (max-width: 1030px)
     .item
         &__box
             $marginW: 1%
@@ -721,25 +743,6 @@ $buttonShadowBlur: 20px
                     span
                         font-size: 2rem
 
-    .coupon
-        .content
-            &__ele
-                width: 28%
-                max-width: 240px
-                margin: 4px
-
-    .footer
-        &__box
-            margin: 20px 0
-            padding: 0
-        &__title
-            display: none
-        &__sub
-            font-size: 1.25rem
-        &__flow
-            &__title
-                font-size: 1rem
-
 @media all and (max-width: 980px)
     .container
         &.footer
@@ -763,6 +766,7 @@ $buttonShadowBlur: 20px
     .search
         &__block
             max-width: 100%
+
     .footer
         &__box
             flex-wrap: wrap
