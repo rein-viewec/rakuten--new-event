@@ -18,8 +18,11 @@ $buttonShadowBlur: 20px
     font-family: 'bahnschrift'
     font-weight: $weight
 
+#app
+    +flex
 .area
     +flex
+    max-width: 1920px
     &.gray
         background-color: #f8fbf8
     &.timer
@@ -157,6 +160,7 @@ $buttonShadowBlur: 20px
             top: 0px
             box-shadow: 0 0 20px #00000036
             .nav__icon
+                transition-delay: 100ms
                 bottom: 0px
                 position: relative
     &__box
@@ -241,23 +245,24 @@ $buttonShadowBlur: 20px
 .item
     &__block
         +flex
-        justify-content: space-around
+        justify-content: center
         padding: 0 10px
     &__box
         +flex
         +zenKakuGothicNew
         border-radius: 15px
-        padding: 2%
-        border: 2px solid #b3b3b3
+        padding: 1%
+        background: #f5f5f5
         color: #464646
         margin: 18px
-        max-width: 30%
+        max-width: 295px
     &__body
         +flex
     &__image
         +img
-        width: 340px
-        height: 340px
+        border-radius: 5px
+        width: 260px
+        height: 260px
         object-fit: cover
     &__name
         +break(2)
@@ -280,12 +285,12 @@ $buttonShadowBlur: 20px
         +flex
         +pressY
         color: #ffffff
-        padding: 16px 0
+        padding: 12px 0
         margin: 11px 0
-        font-size: 1.5rem
-        background-color: $primary
+        font-size: 1rem
+        // background-color: $primary
         position: relative
-        border-radius: 8px
+        border-radius: 12px
         user-select: none
         &:active
             &::before
@@ -295,12 +300,13 @@ $buttonShadowBlur: 20px
             +flex
             min-height: 105%
             position: absolute
-            // outline: 2px solid
-            border-radius: 8px
+            // outline: 2px solid $primary
+            box-shadow: 0 0 0 1.5px $primary
+            border-radius: 12px
             top: 2px
             right: 0
             left: 0
-            z-index: -1
+            z-index: 0
             +trs
         &:after
             position: absolute
@@ -322,7 +328,7 @@ $buttonShadowBlur: 20px
             background-color: #313131
             &::before
                 box-shadow: 0 0 0 1.5px #313131
-                // outline-color: #313131
+                outline-color: #313131
             &::after
                 content: '+'
     &__price
@@ -333,8 +339,8 @@ $buttonShadowBlur: 20px
         color: $thirdly
         img
             +img
-            width: 25%
-            height: 25%
+            width: 22%
+            height: 22%
         span
             font-size: 1.5rem
             font-weight: bold
@@ -342,20 +348,20 @@ $buttonShadowBlur: 20px
 
 .obvious
     .top
-        justify-content: space-between
+        justify-content: center
         .item
             &__box
-                margin: 20px
-                max-width: 45%
+                margin: 20px 40px
+                max-width: 420px
             &__image
-                width: 530px
-                height: 530px
+                width: 390px
+                height: 390px
             &__name
-                font-size: 2rem
-                font-weight: bold
                 +break(2)
+                font-size: 1.25rem
+                font-weight: bold
             &__price
-                font-size: 5.5rem
+                font-size: 4rem
                 span
                     font-size: 2rem
 
@@ -378,48 +384,44 @@ $buttonShadowBlur: 20px
             height: 500px
             object-fit: cover
         &__name
-            font-size: 2rem
+            font-size: 1.5rem
         &__price
             font-size: 5rem
             justify-content: start
             img
-                width: 20%
-                height: 20%
+                width: 18%
+                height: 18%
         &__button
             width: 100%
 
-.swiper
-    &__block
-        overflow: hidden
-        width: 100%
-        position: relative
-        padding: 10px 0
-        user-select: none
-        cursor: grab
-        &:active
-            cursor: grabbing
-    &-wrapper
+.splide
+    overflow: hidden
+    width: 100%
+    position: relative
+    padding: 10px 0
+    user-select: none
+    cursor: grab
+    &:active
+        cursor: grabbing
+    &__list
         justify-content: unset
         flex-wrap: nowrap
         z-index: 1
         display: flex
         transition-property: transform
         box-sizing: content-box
-    &-slide
-        max-width: 396px
+    &__slide
+        max-width: 320px
         height: auto
-    &-button-prev,
-    &-button-next
-        display: none
-        padding: 30px
-        border-radius: 100px
-        background-color: #ffffff
-        drop-shadow: 2px 2px 5px #000000ee
-        width: 40px
-        height: 40px
-        font-size: 0.5rem
     a
         cursor: pointer
+    .item
+        &__box
+            background-color: #f5f5f5
+            border-width: 0
+        &__button
+            &.gray
+                display: none
 
 .more
     opacity: 1
@@ -517,6 +519,7 @@ $buttonShadowBlur: 20px
         max-height: 240px
 
 .footer
+    $footerColor: #facac9
     &__block
         +flex
     &__box
@@ -524,16 +527,20 @@ $buttonShadowBlur: 20px
         flex-wrap: nowrap
         align-items: start
         max-width: 1280px
-        margin: 30px 0
+        margin: 24px 0
         position: relative
         padding: 0 0 0 120px
+        &.flow
+            background-color: $footerColor
+            max-width: 100%
+            padding: 0
     &__item
         +flex
         +bahnschrift
         background-color: $primary
         color: $secondary
         padding: 14px 0
-        margin: 20px 0 0 0 
+        margin: 20px 0 0 0
         font-size: 1.5rem
     &__content
         +zenKakuGothicNew
@@ -545,7 +552,7 @@ $buttonShadowBlur: 20px
         max-width: 31%
         font-size: 0.9rem
         padding: 34px
-        background-color: #facac9
+        background-color: $footerColor
         border-radius: 50px
         height: 100%
         min-height: 700px
@@ -558,7 +565,7 @@ $buttonShadowBlur: 20px
         font-weight: bold
         color: $primary
         font-size: 1.5rem
-        padding: 18px 0 
+        padding: 18px 0
         line-height: unset
     &__list
         +flex
@@ -579,8 +586,30 @@ $buttonShadowBlur: 20px
         max-width: 240px
         margin: 16px 0
     &__flow
-        width: 100%
-        max-width: 100%
+        +flex(1280px)
+        color: #444444
+        padding: 48px 0
+        &__headline
+            +ib(100%)
+            text-align: center
+            font-size: 2.5rem
+            padding: 24px 0
+        &__title
+            +flex
+            font-size: 1.25rem
+            margin: 6px 0
+            font-weight: bold
+        &__ele
+            +flex(14%)
+        &__text
+            min-height: 60px
+        .image
+            width: 140px
+            min-height: 130px
+        i
+            padding: 0 15px
+            font-size: 3rem
+            color: #ec8387
     &__title
         +flex
         width: 100%
@@ -623,7 +652,6 @@ $buttonShadowBlur: 20px
         border-radius: 3px
         i
             padding: 0 0 5px 0
-
 
 @media all and (max-width: 1340px)
     .search
@@ -708,6 +736,9 @@ $buttonShadowBlur: 20px
             display: none
         &__sub
             font-size: 1.25rem
+        &__flow
+            &__title
+                font-size: 1rem
 
 @media all and (max-width: 980px)
     .container

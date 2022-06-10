@@ -31,7 +31,7 @@
     <meta property="og:image:height" content="280" />
     <title>Event page new</title>
     <link rel="icon" href="images/favicon.png" sizes="64x64" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="css/aos.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.css"
@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="css/splide.min.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/style.css?v=1.2" />
+    <link rel="stylesheet" href="css/style.css?v=1.3" />
     <link rel="stylesheet" href="css/custom.css?v=1.0" />
   </head>
   <body>
@@ -685,16 +685,14 @@
             </div>
 
             <section
-              class="content__box swiper__block swiper__1 splide swiper-no-swiping"
+              class="content__box splide"
               role="group"
               data-aos="fade-right"
               data-aos-duration="1000"
             >
               <div class="splide__track">
-                <ul
-                  class="item__block sub swiper-wrapper splide__list swiper-no-swiping"
-                >
-                  <li class="item__box swiper-slide splide__slide">
+                <ul class="item__block sub splide__list">
+                  <li class="item__box splide__slide">
                     <a
                       target="_blank"
                       href="https://item.rakuten.co.jp/twdirect/luckygift-009/"
@@ -735,7 +733,7 @@
                       </a>
                     </div>
                   </li>
-                  <li class="item__box swiper-slide splide__slide">
+                  <li class="item__box splide__slide">
                     <a
                       target="_blank"
                       href="https://item.rakuten.co.jp/twdirect/luckygift-009/"
@@ -776,7 +774,7 @@
                       </a>
                     </div>
                   </li>
-                  <li class="item__box swiper-slide splide__slide">
+                  <li class="item__box splide__slide">
                     <a
                       target="_blank"
                       href="https://item.rakuten.co.jp/twdirect/luckygift-009/"
@@ -817,7 +815,7 @@
                       </a>
                     </div>
                   </li>
-                  <li class="item__box swiper-slide splide__slide">
+                  <li class="item__box splide__slide">
                     <a
                       target="_blank"
                       href="https://item.rakuten.co.jp/twdirect/luckygift-009/"
@@ -858,7 +856,7 @@
                       </a>
                     </div>
                   </li>
-                  <li class="item__box swiper-slide splide__slide">
+                  <li class="item__box splide__slide">
                     <a
                       target="_blank"
                       href="https://item.rakuten.co.jp/twdirect/luckygift-009/"
@@ -899,7 +897,7 @@
                       </a>
                     </div>
                   </li>
-                  <li class="item__box swiper-slide splide__slide">
+                  <li class="item__box splide__slide">
                     <a
                       target="_blank"
                       href="https://item.rakuten.co.jp/twdirect/luckygift-009/"
@@ -1211,12 +1209,115 @@
       <footer class="area">
         <div class="container footer">
           <div class="footer__block">
-            <img
-              class="image footer__flow pc"
-              src="images/guide_00.jpg"
-              loading="lazy"
-              data-aos="fade-up"
-            />
+            <div class="footer__box flow">
+              <div class="footer__flow">
+                <h4 class="footer__flow__headline">
+                  配送の流れ
+                </h4>
+                <div
+                  class="footer__flow__ele"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                  data-aos-easing="ease-in-out-cubic"
+                >
+                  <img class="image" src="images/shop-flow/icon-01.svg" />
+                  <div class="footer__flow__title">ご注文</div>
+                  <div class="footer__flow__text">
+                    お客様がご興味がある商品やお気に入りの商品をご注文。
+                  </div>
+                </div>
+                <i
+                  class="fas fa-angle-right"
+                  data-aos="fade-up"
+                  data-aos-delay="150"
+                  data-aos-easing="ease-in-out-cubic"
+                ></i>
+                <div
+                  class="footer__flow__ele"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                  data-aos-easing="ease-in-out-cubic"
+                >
+                  <img
+                    class="image"
+                    src="images/shop-flow/icon-02.svg"
+                    loading="lazy"
+                  />
+                  <div class="footer__flow__title">注文確認メール</div>
+                  <div class="footer__flow__text">
+                    当店より、注文内容確認のメールを送らせて頂きます。
+                  </div>
+                </div>
+                <i
+                  class="fas fa-angle-right"
+                  data-aos="fade-up"
+                  data-aos-delay="250"
+                  data-aos-easing="ease-in-out-cubic"
+                ></i>
+                <div
+                  class="footer__flow__ele"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                  data-aos-easing="ease-in-out-cubic"
+                >
+                  <img
+                    class="image"
+                    src="images/shop-flow/icon-03.svg"
+                    loading="lazy"
+                  />
+                  <div class="footer__flow__title">検品・出荷</div>
+                  <div class="footer__flow__text">
+                    倉庫にて商品の集荷、検品をし、出荷の手配を行います。
+                  </div>
+                </div>
+                <i
+                  class="fas fa-angle-right"
+                  data-aos="fade-up"
+                  data-aos-delay="350"
+                  data-aos-easing="ease-in-out-cubic"
+                ></i>
+                <div
+                  class="footer__flow__ele"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                  data-aos-easing="ease-in-out-cubic"
+                >
+                  <img
+                    class="image"
+                    src="images/shop-flow/icon-04.svg"
+                    loading="lazy"
+                    data-aos="fade-up"
+                  />
+                  <div class="footer__flow__title">商品発送メール</div>
+                  <div class="footer__flow__text">
+                    お荷物伝票番号を添えた発送完了のメールを送らせて頂きます。
+                  </div>
+                </div>
+                <i
+                  class="fas fa-angle-right"
+                  data-aos="fade-up"
+                  data-aos-delay="450"
+                  data-aos-easing="ease-in-out-cubic"
+                ></i>
+                <div
+                  class="footer__flow__ele"
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                  data-aos-easing="ease-in-out-cubic"
+                >
+                  <img
+                    class="image"
+                    src="images/shop-flow/icon-05.svg"
+                    loading="lazy"
+                    data-aos="fade-up"
+                  />
+                  <div class="footer__flow__title">配送完了</div>
+                  <div class="footer__flow__text">
+                    レビュー・ご感想をお待ちしております。
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="footer__box">
               <div class="footer__title">
                 <span data-aos="fade-right" data-aos-delay="400">
@@ -1271,19 +1372,31 @@
                 </div>
                 <ul class="footer__list">
                   <li>
-                    <img src="images/footer-img-1.svg" loading="lazy" />
+                    <img
+                      src="images/footer-icon/footer-img-1.svg"
+                      loading="lazy"
+                    />
                     クレジットカード決済
                   </li>
                   <li>
-                    <img src="images/footer-img-2.svg" loading="lazy" />
+                    <img
+                      src="images/footer-icon/footer-img-2.svg"
+                      loading="lazy"
+                    />
                     銀行振込（前払）
                   </li>
                   <li>
-                    <img src="images/footer-img-3.svg" loading="lazy" />
+                    <img
+                      src="images/footer-icon/footer-img-3.svg"
+                      loading="lazy"
+                    />
                     ローソン、郵便局ATM等（前払）
                   </li>
                   <li>
-                    <img src="images/footer-img-4.svg" loading="lazy" />
+                    <img
+                      src="images/footer-icon/footer-img-4.svg"
+                      loading="lazy"
+                    />
                     セブンイレブン（前払）
                   </li>
                   <li>
@@ -1303,7 +1416,7 @@
 
                 <img
                   class="image footer__image pc"
-                  src="images/footer-time.svg"
+                  src="images/footer-icon/footer-time.svg"
                   loading="lazy"
                 />
                 電話番号︰050-3704-4284
@@ -1330,7 +1443,7 @@
                 ‧誠に恐れ入りますが、お客様のご都合による返品・交換は承りかねますので、予めご了承くださいませ。
                 ‧商品不良・輸送時破損等の場合は商品到着後7日以　内にお電話またはメールにてお申し出くださいませ。
                 ‧商品に不具合があり当社が申請を受理した場合　は、ご返金での対応となります。交換は出来かね　ますので予めご了承ください。
-                ‧発送済みの商品に関しては、キャンセルは基本的　にお受けできません。ご注文確定前の商品に関し　てのみ、受け付け可能です。
+                ‧発送済みの商品に関しては、キャンセルは基本的　にお受けできません。ご注文確定前の商品に関してのみ、受け付け可能です。
                 <div class="footer__sub">
                   配送会社について
                 </div>
@@ -1346,11 +1459,7 @@
                 をご確認ください
               </div>
             </div>
-            <a
-              href="#"
-              target="_blank"
-              class="footer__item"
-            >
+            <a href="#" target="_blank" class="footer__item">
               TW Direct
             </a>
           </div>
@@ -1371,7 +1480,7 @@
     <script src="js/vue.global.prod.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
     <!-- <script src="js/swiper.min.js"></script> -->
     <script src="js/splide.min.js"></script>
@@ -1542,7 +1651,7 @@
             }
             const marqueeMove = () => {
               Marquees.forEach((m) => {
-                m.style.backgroundPositionY = offset + 'px'
+                m.style.backgroundPositionY = -offset + 'px'
               })
             }
             window.requestAnimationFrame(plusOffset)
