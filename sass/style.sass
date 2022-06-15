@@ -20,6 +20,11 @@ $buttonShadowBlur: 20px
 
 #app
     +flex
+.pc
+    display: flex
+.sp
+    display: none
+
 .area
     +flex
     max-width: 1920px
@@ -202,15 +207,21 @@ $buttonShadowBlur: 20px
         transition: all 750ms ease-in-out
         bottom: 30px
 
+.pre
+    &__block
+        +flex
+    &__title
+        +flex
+
 .content
     &__block
         +flex
         margin: 30px 0 40px
         max-width: 1280px
     &__title
-        +flex
+        +flex(900px)
     &__item
-        +flex
+        +flex(900px)
         margin: 12px 0
     &__box
         +flex
@@ -220,14 +231,13 @@ $buttonShadowBlur: 20px
             +flex
     // Automatic generator items
     &__button
-        +flex
-        +b
         +zenKakuGothicNew(600)
         background-color: $primary
-        padding: 18px 20px
-        margin: 16px
-        max-width: 1120px
-        font-size: 1.5rem
+        padding: 18px 2px
+        margin: 16px 0px
+        max-width: 584px
+        max-height: 54px
+        font-size: 1rem
         text-align: center
         border-radius: 10px
         color: $secondary
@@ -252,18 +262,19 @@ $buttonShadowBlur: 20px
         +flex
         +zenKakuGothicNew
         border-radius: 15px
-        padding: 2% 1%
+        padding: 16px
         background: #f5f5f5
         color: #464646
         margin: 18px
-        max-width: 295px
+        max-width: 236px
     &__body
         +flex
     &__image
         +img
+        object-fit: cover
         border-radius: 5px
-        width: 260px
-        height: 260px
+        width: 200px
+        height: 200px
         object-fit: cover
     &__name
         +break(2)
@@ -286,12 +297,12 @@ $buttonShadowBlur: 20px
         +flex
         +pressY
         color: #ffffff
-        padding: 12px 0
+        padding: 8px 0
         margin: 11px 0
         font-size: 1rem
         // background-color: $primary
         position: relative
-        border-radius: 12px
+        border-radius: 8px
         user-select: none
         &:active
             &::before
@@ -303,7 +314,7 @@ $buttonShadowBlur: 20px
             position: absolute
             // outline: 2px solid $primary
             box-shadow: 0 0 0 1.5px $primary
-            border-radius: 12px
+            border-radius: 8px
             top: 2px
             right: 0
             left: 0
@@ -311,9 +322,9 @@ $buttonShadowBlur: 20px
             +trs
         &:after
             position: absolute
-            right: 15px
+            right: 8px
             color: #ffffff
-            font-size: 1.5rem
+            font-size: 1rem
             font-weight: bold
             margin: 0 0 4px 0
         &.primary
@@ -336,7 +347,7 @@ $buttonShadowBlur: 20px
         +flex
         justify-content: space-between
         +bahnschrift(1000)
-        font-size: 3.25rem
+        font-size: 2.25rem
         color: $thirdly
         img
             +img
@@ -353,16 +364,16 @@ $buttonShadowBlur: 20px
         .item
             &__box
                 margin: 20px 40px
-                max-width: 420px
+                max-width: 336px
             &__image
-                width: 390px
-                height: 390px
+                width: 310px
+                height: 310px
             &__name
                 +break(2)
-                font-size: 1.25rem
+                font-size: 1.2rem
                 font-weight: bold
             &__price
-                font-size: 4rem
+                font-size: 3rem
                 span
                     font-size: 2rem
 
@@ -375,19 +386,19 @@ $buttonShadowBlur: 20px
             justify-content: space-around
         &__box
             justify-content: space-between
-            max-width: 100%
+            max-width: 907px
         &__body
-            max-width: calc(100% - 515px)
+            max-width: calc(100% - 415px)
             padding: 0 0 0 15px
         &__image
             +img
-            width: 500px
-            height: 500px
+            width: 400px
+            height: 400px
             object-fit: cover
         &__name
             font-size: 1.5rem
         &__price
-            font-size: 5rem
+            font-size: 3rem
             justify-content: start
             img
                 width: 18%
@@ -412,10 +423,13 @@ $buttonShadowBlur: 20px
         transition-property: transform
         box-sizing: content-box
     &__slide
-        max-width: 320px
+        max-width: 256px
         height: auto
     a
         cursor: pointer
+        img
+            width: 220px
+            height: 220px
     .item
         &__box
             background-color: #f5f5f5
@@ -443,19 +457,20 @@ $buttonShadowBlur: 20px
 .search
     &__block
         +flex
-        padding: 24px
+        max-width: 750px
+        padding: 24px 0
     &__box
         +flex
         position: relative
     &__input
         +flex
         +zenKakuGothicNew
-        max-width: 1120px
+        max-width: 828px
         border-radius: 12px
         text-align: left
         padding: 15px 100px 15px 25px
         border: 2px solid $thirdly
-        min-height: 72px
+        max-height: 54px
         position: relative
         font-size: 1.5rem
         color: $primary
@@ -470,7 +485,7 @@ $buttonShadowBlur: 20px
         +pressY(1px)
         z-index: 1
         color: $thirdly
-        font-size: 2rem
+        font-size: 1.75rem
         max-width: 100px
         height: 100%
         max-height: 100px
@@ -484,7 +499,7 @@ $buttonShadowBlur: 20px
 .tag
     &__block
         +flex
-        width: 900px
+        max-width: 900px
         flex-wrap: wrap
         a
             +flex
@@ -514,7 +529,7 @@ $buttonShadowBlur: 20px
     .content
         &__ele
             width: 100%
-            max-width: 240px
+            max-width: 192px
             margin: 10px
     .image
         max-width: 240px
@@ -547,7 +562,7 @@ $buttonShadowBlur: 20px
     &__content
         +zenKakuGothicNew
         box-sizing: border-box
-        color: #444444
+        color: #222222
         margin: 10px
         line-height: 1.5rem
         width: 100%
@@ -642,7 +657,7 @@ $buttonShadowBlur: 20px
         +hov
         position: fixed
         z-index: 99
-        bottom: 45px
+        bottom: 85px
         right: 100px
         height: 100%
         max-width: 50px
@@ -686,62 +701,32 @@ $buttonShadowBlur: 20px
         .content
             &__ele
                 width: 28%
-                max-width: 240px
                 margin: 4px
 
     .footer
         &__box
+            flex-wrap: wrap
             margin: 20px 0
             padding: 0
         &__title
-            display: none
+            margin: 18px 0
+            max-width: 100%
+            height: 80px
+            transform: rotate(0deg)
+            position: unset
+            left: 0
+            top: 0
+            span
+                width: 100%
+                justify-content: center
+                text-align: center
+        &__content
+            max-width: 30%
         &__sub
             font-size: 1.25rem
         &__flow
             &__title
                 font-size: 1rem
-
-@media all and (max-width: 1030px)
-    .item
-        &__box
-            $marginW: 1%
-            margin: 8px $marginW
-            max-width: 49% - $marginW
-            justify-content: center
-        &__image
-            width: 100%
-            max-width: 42vw
-            height: 42vw
-        &__price
-            font-size: 7vw
-            img
-                width: 30%
-                height: 30%
-            span
-                font-size: 1.5rem
-        &__button
-            padding: 10px 0
-            font-size: 3vw
-
-    .obvious
-        .top
-            .item
-                &__box
-                    $marginW: 1%
-                    margin: 8px $marginW
-                    max-width: 49% - $marginW
-                    justify-content: center
-                &__image
-                    width: 100%
-                    max-width: 42vw
-                    height: 42vw
-                &__name
-                    font-size: 1.2rem
-                    margin: 8px 0
-                &__price
-                    font-size: 7vw
-                    span
-                        font-size: 2rem
 
 @media all and (max-width: 980px)
     .container
@@ -752,19 +737,96 @@ $buttonShadowBlur: 20px
         &__block
             display: none
 
+    .item
+        &__block
+            justify-content: space-around
+            padding: 0 4px
+        &__box
+            $marginW: 0.5%
+            margin: 8px $marginW
+            max-width: 48% - $marginW
+            justify-content: center
+            padding: 12px
+        &__image
+            width: 100%
+            max-width: 43vw
+            height: 43vw
+        &__name
+            font-size: 3vw
+        &__price
+            font-size: 7vw
+            img
+                width: 30%
+                height: 30%
+            span
+                font-size: 1.5rem
+        &__button
+            padding: 10px 0
+            font-size: 2vw
+
+    .obvious
+        .top
+            justify-content: space-around
+            .item
+                &__box
+                    $marginW: 1%
+                    margin: 8px $marginW
+                    max-width: 48% - $marginW
+                    justify-content: center
+                &__name
+                    font-size: 1rem
+                    margin: 8px 0
+                &__image
+                    width: 100%
+                    max-width: 43vw
+                    height: 43vw
+                &__price
+                    font-size: 5vw
+                    span
+                        font-size: 1.5rem
+                &__button
+                    padding: 10px 0
+                    font-size: 2vw
+
+    .splide
+        &__slide
+            width: 256px !important
+            max-width: 256px
+        .item
+            &__box
+                margin: 8px 2%
+            &__name
+                font-size: 1rem
+            &__image
+                max-width: 220px
+                max-height: 220px
+            &__price
+                font-size: 2rem
+                img
+                    width: 30%
+                    height: 30%
+                span
+                    font-size: 1.5rem
+
     .full-width
         .item
+            &__box
+                max-width: 576px
             &__body
                 max-width: 100%
+                padding: 0
             &__image
-                width: 96vw
-                height: 96vw
+                width: 100%
+                height: 90vw
+                max-height: 576px
             &__price
                 justify-content: space-between
                 font-size: 12vw
 
     .search
         &__block
+            max-width: 100%
+        &__input
             max-width: 100%
 
     .footer
@@ -789,6 +851,12 @@ $buttonShadowBlur: 20px
             right: 30px
 
 @media all and (max-width: 768px)
+    .pc
+        display: none
+
+    .sp
+        display: flex
+
     .container
         &.top
             height: 130vw
@@ -811,6 +879,8 @@ $buttonShadowBlur: 20px
                 min-width: 35px
 
     .content
+        &__title
+            padding: 0 12px
         &__box
             +flex
             margin: 16px 0
@@ -834,8 +904,6 @@ $buttonShadowBlur: 20px
                 width: 1px
         &__icon
             font-size: 0.75rem
-        &__text
-            font-size: 0.5rem
 
     .footer
         &__flow
@@ -868,9 +936,11 @@ $buttonShadowBlur: 20px
         &__block
             padding: 6px 0
         &__text
-            font-size: 0.5rem
+            font-size: 1.1rem
 
     .item
+        &__block
+             justify-content: space-between
         &__button
             padding: 8px 0
             margin: 6px 0
@@ -879,6 +949,7 @@ $buttonShadowBlur: 20px
 
     .obvious
         .top
+            justify-content: space-between
             .item
                 &__price
                     span
@@ -900,6 +971,6 @@ $buttonShadowBlur: 20px
 @media all and (max-width: 400px)
     .item
         &__price
-            font-size: 1.4rem
+            font-size: 1.25rem
             span
                 font-size: 1rem
