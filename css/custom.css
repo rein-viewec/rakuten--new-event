@@ -30,11 +30,11 @@
 .area.nav .nav__block {
   background-color: var(--secondary);
 }
-/* 頂部導航區塊 按鈕 */
+/* 頂部固定導航區塊 按鈕 */
 .area.nav .nav__box {
   background-color: #00000000;
 }
-/* 頂部導航區塊 文字 */
+/* 頂部固定導航區塊 文字 */
 .area.nav .nav__text,
 .area.nav .nav__icon {
   color: var(--primary);
