@@ -62,11 +62,10 @@ $buttonShadowBlur: 20px
         user-select: none
     &__box
         +flex
-        box-shadow: 0 0 60px #0000001f
         position: fixed
-        width: 60px
+        width: 100%
+        max-width: 60px
         height: 100000vh
-        background-color: #ffffff9c
         top: 0
         z-index: 99
         &.right
@@ -81,7 +80,7 @@ $buttonShadowBlur: 20px
         height: 100%
         background-repeat: repeat-y
         background-position: top
-        background-size: 100%
+        background-size: auto
         background-image: url('../images/matsuri.jpg')
     &__text
         +flex
@@ -506,7 +505,7 @@ $buttonShadowBlur: 20px
             +flex
             +bahnschrift
             width: auto
-            padding: 10px 30px
+            padding: 6px 24px
             font-size: 1rem
             border: 1px solid $primary
             border-radius: 100px

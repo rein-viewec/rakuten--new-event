@@ -134,12 +134,10 @@
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   width: 100%;
-  -webkit-box-shadow: 0 0 60px #0000001f;
-          box-shadow: 0 0 60px #0000001f;
   position: fixed;
-  width: 60px;
+  width: 100%;
+  max-width: 60px;
   height: 100000vh;
-  background-color: #ffffff9c;
   top: 0;
   z-index: 99;
 }
@@ -177,7 +175,7 @@
   height: 100%;
   background-repeat: repeat-y;
   background-position: top;
-  background-size: 100%;
+  background-size: auto;
   background-image: url("../images/matsuri.jpg");
 }
 
@@ -1357,7 +1355,7 @@
   font-family: 'bahnschrift';
   font-weight: 400;
   width: auto;
-  padding: 10px 30px;
+  padding: 6px 24px;
   font-size: 1rem;
   border: 1px solid #ee504d;
   border-radius: 100px;
