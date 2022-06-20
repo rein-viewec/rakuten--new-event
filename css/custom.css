@@ -3,6 +3,9 @@
   --secondary: #fff4dc;
   --thirdly: #d1322f;
   --fourth: #f9dc5c;
+  --footer: #facac9;
+  --footer-arrow: #77777799;
+  --footer-title: #444444;
 }
 
 /* -------倒數計時器-------- */
@@ -46,6 +49,9 @@
   color: var(--secondary);
   box-shadow: 0px 8px 0 var(--thirdly), 0 0 20px #00000036;
 }
+.content__button:active {
+  box-shadow: 0px 6px 0 var(--thirdly), 0 0 20px #00000036;
+}
 /* 看更多 按鈕 第二樣式 */
 .content__button.more__secondary {
   background-color: var(--fourth);
@@ -73,4 +79,31 @@
 .tag__block a {
   color: var(--primary);
   border-color: var(--primary);
+}
+
+/* --------Footer 配送流程 / 購買須知-------- */
+/* Footer 購買流程 背景色 */
+.footer__box.flow {
+  background-color: var(--footer);
+}
+/* Footer 購買流程 箭頭 icon */
+.footer__flow i{
+  color: var(--footer-arrow);
+}
+/* Footer shopping giude Title */
+.footer__title h3 {
+  color: var(--thirdly);
+}
+/* Footer 購買須知 背景色 */
+.footer__content {
+  background-color: var(--footer);
+}
+/* Footer 購買須知 小標題 */
+.footer__sub {
+  color: var(--primary);
+}
+/* Footer TWDirect  */
+.footer__item {
+  background-color: var(--primary);
+  color: var(--secondary);
 }
