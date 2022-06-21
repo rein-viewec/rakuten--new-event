@@ -22,6 +22,11 @@
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .pc {
