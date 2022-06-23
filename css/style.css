@@ -947,6 +947,7 @@
   font-weight: 1000;
   font-size: 2.25rem;
   color: #d1322f;
+  margin: 22px 0 0 0;
 }
 
 .item__price img {
@@ -965,6 +966,23 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0 0 0 -5%;
+}
+
+.item__price.deleted {
+  font-weight: normal;
+  height: 0px;
+  margin: 0 10px 0 0;
+  text-decoration: line-through;
+  font-size: 1.25rem !important;
+  -webkit-box-pack: end;
+  -webkit-justify-content: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.item__price.deleted span {
+  margin: 0 0 0 5px;
+  font-size: 1rem !important;
 }
 
 .obvious .top {
@@ -1062,11 +1080,26 @@
   -webkit-justify-content: start;
       -ms-flex-pack: start;
           justify-content: start;
+  margin: 28px 0 0 0;
 }
 
 .full-width .item__price img {
   width: 18%;
   height: 18%;
+}
+
+.full-width .item__price.deleted {
+  margin: 0 10px 0 0;
+  font-size: 1.75rem !important;
+  -webkit-box-pack: end;
+  -webkit-justify-content: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.full-width .item__price.deleted span {
+  margin: 0 0 0 5px;
+  font-size: 1rem !important;
 }
 
 .full-width .item__button {
