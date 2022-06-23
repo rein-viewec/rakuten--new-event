@@ -33,10 +33,14 @@
 .area.nav .nav__block {
   background-color: var(--secondary);
 }
+.nav__box:not(:last-child)::after {
+  background-color: var(--primary);
+}
 /* 頂部固定導航區塊 按鈕 */
 .area.nav .nav__box {
   background-color: #00000000;
 }
+
 /* 頂部固定導航區塊 文字 */
 .area.nav .nav__text,
 .area.nav .nav__icon {
@@ -83,11 +87,14 @@
 
 /* --------Footer 配送流程 / 購買須知-------- */
 /* Footer 購買流程 背景色 */
+.footer__flow {
+  color: var(--primary);
+}
 .footer__box.flow {
-  background-color: var(--footer);
+  background-color: #fff4dc;
 }
 /* Footer 購買流程 箭頭 icon */
-.footer__flow i{
+.footer__flow i {
   color: var(--footer-arrow);
 }
 /* Footer shopping giude Title */
@@ -96,7 +103,7 @@
 }
 /* Footer 購買須知 背景色 */
 .footer__content {
-  background-color: var(--footer);
+  background-color: #fff4dc;
 }
 /* Footer 購買須知 小標題 */
 .footer__sub {
