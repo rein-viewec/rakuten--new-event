@@ -1767,6 +1767,8 @@
               // rewindByDrag: true,
               speed: 7000,
             }
+            const spCount = document.querySelector('.splide')
+            if (!spCount) return
             const splide1 = new Splide('.splide', splideParams)
             splide1.mount(window.splide.Extensions)
           },
