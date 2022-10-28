@@ -114,3 +114,12 @@
   background-color: var(--primary);
   color: var(--secondary);
 }
+
+/* All Page color */
+/* 變更 app 背景色後 area 可以不更改 */
+#app {
+  background-color: #ffffffff;
+}
+.area {
+  background-color: #ffffffff;
+}

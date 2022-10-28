@@ -777,6 +777,8 @@
   overflow: hidden;
   cursor: pointer;
   margin: 8px 0;
+  min-height: 55px;
+  width: 100%;
 }
 
 .item__name:hover {
