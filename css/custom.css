@@ -123,3 +123,15 @@
 .area {
   background-color: #ffffffff;
 }
+
+/* Navbar 自訂單個連結寬度 */
+.nav__box {
+  /* 除以連結個數 ex 除以5個連結 */
+  max-width: calc(80% / 5);
+}
+/* 1280 解析度下除以連結數 */
+@media all and (max-width: 1280px) {
+  .nav__box {
+    max-width: calc(100% / 4);
+  }
+}
