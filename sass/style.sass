@@ -296,7 +296,7 @@ $buttonShadowBlur: 20px
         margin: 8px 0
         font-weight: bold
         color: #464646
-        height: 76px
+        height: 74px
     &__button
         +flex
         +pressY
@@ -841,8 +841,11 @@ $buttonShadowBlur: 20px
             width: 256px !important
             max-width: 256px
         .item
+            &__block
+                 justify-content: space-between
             &__box
                 margin: 8px 2%
+                max-width: 256px
             &__name
                 font-size: 1rem
             &__image
@@ -1003,6 +1006,12 @@ $buttonShadowBlur: 20px
                     span
                         font-size: 1.25rem
 
+    .coupon
+        +grid
+        .content__ele
+            max-width: unset
+            width: unset
+
     .search
         &__block
             padding: 8px 6px
@@ -1021,6 +1030,7 @@ $buttonShadowBlur: 20px
             a
                 padding: 6px 15px
                 font-size: 0.75rem
+    
     .footer
         &__box
             flex-wrap: wrap

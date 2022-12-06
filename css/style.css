@@ -798,7 +798,7 @@
   margin: 8px 0;
   font-weight: bold;
   color: #464646;
-  height: 76px;
+  height: 74px;
 }
 
 .item__description:hover {
@@ -2023,8 +2023,15 @@
     width: 256px !important;
     max-width: 256px;
   }
+  .splide .item__block {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .splide .item__box {
     margin: 8px 2%;
+    max-width: 256px;
   }
   .splide .item__name {
     font-size: 1rem;
@@ -2234,6 +2241,17 @@
   }
   .obvious .top .item__price span {
     font-size: 1.25rem;
+  }
+  .coupon {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+  .coupon .content__ele {
+    max-width: unset;
+    width: unset;
   }
   .search__block {
     padding: 8px 6px;

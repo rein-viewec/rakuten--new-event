@@ -37,10 +37,10 @@ const VueApp = Vue.createApp({
   mounted() {
     this.shuffle()
     this.countloop()
-    this.setSplide()
     this.setScrollEffect()
     this.setAOS()
     this.isRandom()
+    this.setSplide()
     // this.setLocomotiveScroll()
     // this.addMoreExpension()
     // this.setSwiper()

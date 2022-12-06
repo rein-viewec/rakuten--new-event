@@ -5,6 +5,11 @@
   flex-wrap: wrap
   width: $w
 
+@mixin grid($w: 100%)
+  display: grid
+  grid-template-columns: 1fr 1fr
+  width: $w
+
 @mixin trs($s:100ms)
   transition: $s all ease-in-out
 
