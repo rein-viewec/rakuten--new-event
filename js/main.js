@@ -38,6 +38,7 @@ const VueApp = Vue.createApp({
     this.shuffle()
     this.countloop()
     this.setScrollEffect()
+    this.setScrollTop()
     this.setAOS()
     this.isRandom()
     this.setSplide()
@@ -103,6 +104,7 @@ const VueApp = Vue.createApp({
       const scroll = new LocomotiveScroll(LocomotiveScrollParams)
     },
     setScrollEffect() {
+      if (!$('#Nav').offset()) return
       const Marquees = document.querySelectorAll('.marquee')
       const body = document.querySelector('body')
       let offset = 0
@@ -120,17 +122,6 @@ const VueApp = Vue.createApp({
             },
             700,
           )
-      })
-      $('#GoTop').on('click', () => {
-        $('html, body').animate(
-          {
-            scrollTop: 0,
-          },
-          700,
-        )
-      })
-      $(window).resize(() => {
-        navTop = $('#Nav').offset().top
       })
       const setOffset = () => {
         marqueeMove()
@@ -166,6 +157,16 @@ const VueApp = Vue.createApp({
       }
       window.requestAnimationFrame(plusOffset)
       window.addEventListener('scroll', setOffset)
+    },
+    setScrollTop() {
+      $('#GoTop').on('click', () => {
+        $('html, body').animate(
+          {
+            scrollTop: 0,
+          },
+          700,
+        )
+      })
     },
     setSplide() {
       const splideParams = {

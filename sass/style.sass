@@ -288,7 +288,7 @@ $buttonShadowBlur: 20px
         min-height: 55px
         width: 100%
     &__description
-        +break(3)
+        +break(10)
         +hov(0.7)
         font-size: 1rem
         overflow: hidden
@@ -296,7 +296,8 @@ $buttonShadowBlur: 20px
         margin: 8px 0
         font-weight: bold
         color: #464646
-        height: 74px
+        min-height: 144px
+        // max-height: 240px
     &__button
         +flex
         +pressY
@@ -811,6 +812,8 @@ $buttonShadowBlur: 20px
         &__button
             padding: 10px 0
             font-size: 0.75rem
+        &__description
+            min-height: unset
 
     .obvious
         .top
